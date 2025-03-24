@@ -5,7 +5,7 @@ import Layout from "@/components/layyy";
 
 const Home = () => {
   const content = {
-    greeting: "Hi There! 👋 I'm Saliq Nazir Malik",
+    greeting: "Hi There! 👋 I'm Akash Ahmad Malik",
     title: "🚀 Full-Stack Web Developer | Problem Solver | Cricket Enthusiast.",
     description: `I’m a software engineer passionate about development, design, and performance. 
       I believe in non-linear thinking, the beauty in chaos, and the importance of empathy as a human.`,
@@ -23,8 +23,8 @@ const Home = () => {
               nav="/ed"
               t1={content.greeting}
               t2={content.title}
-              t3={content.description}
-              t4={content.connect}
+              t3={content.connect}
+              t4={content.description}
               links={content.links}
             />
             <Twoo />

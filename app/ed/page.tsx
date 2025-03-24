@@ -2,56 +2,6 @@ import RightArrow from "@/components/rightArrow"
 import ThreeTexts from "@/components/mainpage/threeText"
 import Layout from "@/components/layyy"
 
-const schoolMarks = [
-  {subject : "English" , 
-    marks : 90
-   },
-  {subject : "Physics" , 
-   marks : 85
-  },
-  {subject : "Chemistry" , 
-    marks : 90
-   },
-   {subject : "Biology" , 
-    marks : 78
-   },
-   {subject : "Math" , 
-    marks : 90
-   },
- 
-]
-const school = (
-  <div className="flex flex-col gap-4 rounded-lg border border-slate-200 bg-white shadow-sm p-4">
-    <div className="flex flex-col space-y-4">
-      <div className="text-slate-700 font-medium text-sm md:text-base">
-        <div className="flex justify-between px-4 py-2">
-          <span className="font-bold">Subject</span>
-          <span className="font-bold">Grade 10</span>
-        </div>
-        <div className="flex flex-col gap-2 mt-2">
-          <div className="flex justify-between px-4 py-2 bg-slate-100 rounded-t-md border-b border-slate-300">
-            <span className="font-semibold text-slate-700 text-sm md:text-base">Subject</span>
-            <span className="font-bold text-slate-700 text-sm md:text-base">Marks</span>
-          </div>
-          {schoolMarks.map((s, i) => (
-            <div
-              className="flex justify-between px-4 py-3 border-b border-slate-200 last:border-b-0 hover:bg-slate-50 transition-colors duration-150"
-              key={i}
-            >
-              <span className="font-semibold text-slate-700 text-sm md:text-base">{s.subject}</span>
-              <span className="font-bold text-slate-700 text-sm md:text-base">{s.marks}</span>
-            </div>
-          ))}
-          <div className="flex justify-between px-4 py-3 bg-slate-100 font-semibold text-slate-900 border-t border-slate-300 rounded-b-md">
-            <span className="text-sm md:text-base">Total Marks</span>
-            <span className="text-sm md:text-base">433</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
 export default function A() {
     return  <Layout> <div className="h-screen flex w-max">
       <ThreeTexts  nav="/pros" t1="B-Tech Computer Engineering" t2="Jamia Millia Islamia , New Delhi 110025." 
@@ -194,6 +144,57 @@ const college = (
     <div className="flex justify-between px-4 py-3 bg-slate-100 font-semibold text-slate-900 border-t border-slate-300 rounded-b-md">
       <span className="text-sm md:text-base">Total SPI</span>
       <span className="text-sm md:text-base">{(totalSpi/divison).toFixed(2)}</span>
+    </div>
+  </div>
+);
+
+
+const schoolMarks = [
+  {subject : "English" , 
+    marks : 90
+   },
+  {subject : "Physics" , 
+   marks : 85
+  },
+  {subject : "Chemistry" , 
+    marks : 90
+   },
+   {subject : "Biology" , 
+    marks : 78
+   },
+   {subject : "Math" , 
+    marks : 90
+   },
+ 
+]
+const school = (
+  <div className="flex flex-col gap-4 rounded-lg border border-slate-200 bg-white shadow-sm p-4">
+    <div className="flex flex-col space-y-4">
+      <div className="text-slate-700 font-medium text-sm md:text-base">
+        <div className="flex justify-between px-4 py-2">
+          <span className="font-bold">Subject</span>
+          <span className="font-bold">Grade 10</span>
+        </div>
+        <div className="flex flex-col gap-2 mt-2">
+          <div className="flex justify-between px-4 py-2 bg-slate-100 rounded-t-md border-b border-slate-300">
+            <span className="font-semibold text-slate-700 text-sm md:text-base">Subject</span>
+            <span className="font-bold text-slate-700 text-sm md:text-base">Marks</span>
+          </div>
+          {schoolMarks.map((s, i) => (
+            <div
+              className="flex justify-between px-4 py-3 border-b border-slate-200 last:border-b-0 hover:bg-slate-50 transition-colors duration-150"
+              key={i}
+            >
+              <span className="font-semibold text-slate-700 text-sm md:text-base">{s.subject}</span>
+              <span className="font-bold text-slate-700 text-sm md:text-base">{s.marks}</span>
+            </div>
+          ))}
+          <div className="flex justify-between px-4 py-3 bg-slate-100 font-semibold text-slate-900 border-t border-slate-300 rounded-b-md">
+            <span className="text-sm md:text-base">Total Marks</span>
+            <span className="text-sm md:text-base">433</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 );
