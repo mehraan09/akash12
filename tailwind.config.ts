@@ -19,12 +19,9 @@ export default {
         mono: ['"JetBrains Mono"', 'monospace'], 
         montserrat: ['"Montserrat"', 'sans-serif'],
         regularFont: ['"regularFont"', 'sans-serif'],
-        Rampart: ["Rampart One", "cursive"],
         macondo: ["Macondo Swash Caps", "cursive"],
-        griffy: ["Griffy", "cursive"],
         sp:["Special Elite", "serif"],
         nova: ["Nova Oval", "serif"],
-        neuton : ["Neuton"  , "serif"],
         iansui  : ["Iansui" , "serif"],
         instru: ["Instrument Serif" , "serif"]
       },

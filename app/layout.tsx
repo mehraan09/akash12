@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navs";
@@ -18,10 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Akash Ahmad Malik - Portfolio",
   description:
-    "Personal portfolio of Akash Ahmad Malik showcasing projects, skills, and achievements in software development and technology.",
+    "Hi There!.",
   keywords: [
     "Akash Ahmad Malik",
-    "shuttttttt upppppppp",
     "software developer",
     "portfolio",
     "web development",
@@ -31,7 +30,6 @@ export const metadata: Metadata = {
     "projects",
   ],
   authors: [{ name: "Akash Ahmad Malik" }],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow", // Allow indexing and link following
   icons: {
     icon: "/image.png", // Ensure this is in /public
@@ -40,7 +38,7 @@ export const metadata: Metadata = {
     title: "Akash Ahmad Malik - Portfolio",
     description:
       "Explore the personal portfolio of Akash Ahmad Malik, featuring software development projects and technical skills.",
-    url: "https://akash09.vercel.app", // Replace with your Vercel domain
+    url: "https://akash09.vercel.app", // Replace with your actual domain
     siteName: "Akash Ahmad Malik",
     images: [
       {
@@ -61,6 +59,12 @@ export const metadata: Metadata = {
     creator: "@Aakash41339611", // Replace with your Twitter handle
     images: ["https://your-domain.vercel.app/image.png"],
   },
+};
+
+// ✅ Define viewport separately
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

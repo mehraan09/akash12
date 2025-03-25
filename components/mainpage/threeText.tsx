@@ -7,7 +7,7 @@ interface t {
   t2?: ReactNode;
   t3?: ReactNode;
   t4?: ReactNode;
-  nav: string;
+  nav?: string;
   techs?: string[];
   links?: {
     l1: string;
@@ -25,11 +25,11 @@ export default function ThreeTexts({ t1, t2, t3, t4, links, techs, nav }: t) {
           </p>
           <div className="font-lora text-slate-600 ">{t2}</div>
           <div className="md:hidden flex justify-center">
-            <RightArrow linkk={nav}></RightArrow>
+            <RightArrow linkk={nav || "/"}></RightArrow>
           </div>
         </div>
         <div className="font-iansui text-slate-500 flex-wrap">{t3}</div>
-        <div className="font-sp text-slate-900  text-right text-md">{t4}</div>
+        <div className="font-iansui text-slate-900  text-right text-md">{t4}</div>
 
         <div className="flex gap-4 flex-wrap">
           {techs
