@@ -1,14 +1,10 @@
 import ThreeTexts from "@/components/mainpage/threeText";
-import RightArrow from "@/components/rightArrow";
-import Layout from "@/components/layyy";
 import { SiNextdotjs, SiTurborepo, SiPostgresql, SiTypescript, SiExpress, SiPrisma, SiTailwindcss, SiHono, SiReact, SiCloudflare, SiMongodb } from "react-icons/si";
 
 export default function A() {
   return (
-    <Layout>
       <div className="h-screen flex w-max">
         <ThreeTexts
-          nav="/skill"
           t1="DriftPro - Paytm for Desktop"
           t2="Feb 2025 - Present"
           t3={data3}
@@ -17,7 +13,6 @@ export default function A() {
         />
 
         <ThreeTexts
-          nav="/skill"
           t1="MediumPro"
           t2="Dec 2024 - Jan 2025"
           t3={data2}
@@ -29,19 +24,13 @@ export default function A() {
         />
 
         <ThreeTexts
-          nav="/skill"
           t1="College-Based Database Management System"
           t2="Aug 2023 - Dec 2023"
           t3={data1}
           t4={t4CollegeDBMS}
           links={[{ l1: "https://github.com/Akasho09/p24", l2: "⚙️ Github" }]}
         />
-
-        <div className="hidden md:flex">
-          <RightArrow linkk="/skill" />
-        </div>
       </div>
-    </Layout>
   );
 }
 

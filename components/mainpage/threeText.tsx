@@ -1,13 +1,11 @@
 import { ReactNode } from "react";
 import Link from "next/link";
-import RightArrow from "../rightArrow";
 
 interface t {
   t1: string;
   t2?: ReactNode;
   t3?: ReactNode;
   t4?: ReactNode;
-  nav?: string;
   techs?: string[];
   links?: {
     l1: string;
@@ -15,22 +13,18 @@ interface t {
   }[];
 }
 
-export default function ThreeTexts({ t1, t2, t3, t4, links, techs, nav }: t) {
+export default function ThreeTexts({ t1, t2, t3, t4, links, techs }: t) {
   return (
-    <div className="w-[94.8vw] md:w-[28rem] h-full border-r border-black">
+    <div className="w-[94.8vw] md:w-[28rem] h-full md:border-r border-black">
       <div className=" h-full flex flex-col justify-between p-8">
         <div className="">
           <p className="md:text-xl text-xs font-macondo hover:text-red-600 font-bold">
             {t1}
           </p>
           <div className="font-lora text-slate-600 ">{t2}</div>
-          <div className="md:hidden flex justify-center">
-            <RightArrow linkk={nav || "/"}></RightArrow>
-          </div>
         </div>
         <div className="font-iansui text-slate-500 flex-wrap">{t3}</div>
         <div className="font-iansui text-slate-900  text-right text-md">{t4}</div>
-
         <div className="flex gap-4 flex-wrap">
           {techs
             ? techs.map((a) => (

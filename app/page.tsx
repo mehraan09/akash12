@@ -1,7 +1,5 @@
 import Twoo from "@/components/mainpage/twoImgs";
-import RightArrow from "@/components/rightArrow";
 import ThreeTexts from "@/components/mainpage/threeText";
-import Layout from "@/components/layyy";
 
 const Home = () => {
   const content = {
@@ -16,12 +14,9 @@ const Home = () => {
       l2: "📄 Resume"
     }]
   };
-
   return (
-    <Layout>
       <div className="h-screen flex w-max">
             <ThreeTexts
-              nav="/ed"
               t1={content.greeting}
               t2={content.title}
               t3={content.connect}
@@ -29,9 +24,7 @@ const Home = () => {
               links={content.links}
             />
             <Twoo />
-            <div className="hidden md:flex"><RightArrow  linkk="/ed" /></div>
             </div>
-    </Layout>
   );
 };
 

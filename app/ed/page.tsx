@@ -1,28 +1,25 @@
-import RightArrow from "@/components/rightArrow"
 import ThreeTexts from "@/components/mainpage/threeText"
-import Layout from "@/components/layyy"
 
 export default function A() {
-    return  <Layout> <div className="h-screen flex w-max">
-      <ThreeTexts  nav="/pros" t1="B-Tech Computer Engineering" t2="Jamia Millia Islamia , New Delhi 110025." 
+    return  <div className="h-screen flex w-max">
+      <ThreeTexts t1="B-Tech Computer Engineering" t2="Jamia Millia Islamia , New Delhi 110025." 
       t3={college}
       t4=" Aug 2022 - May 2026 " 
       links={[{l1:"https://drive.google.com/file/d/1VHfcJLD8fiaKNbQDGNS7KNHqO31dwKGE/view?usp=drive_link"  ,  l2:"💾 Drive"}]}></ThreeTexts>
 
-      <ThreeTexts  nav="/pros" t1="JEE Mains and JEE Advanced" t2="Petronet Kashmir Super 30 , Srinagar Kashmir." 
+      <ThreeTexts t1="JEE Mains and JEE Advanced" t2="Petronet Kashmir Super 30 , Srinagar Kashmir." 
       t3={data}
       t4={"Sept 2021 - Aug 2022"} 
       links={[{l1:"https://drive.google.com/drive/u/0/folders/1VBKGDT7q4WWNCuIjlHhReuCcu8uG2KJ5" , l2:"💾 Drive"}]}
 ></ThreeTexts>
 
-      <ThreeTexts  nav="/pros" t1="PCMB 12th Boards" t2="Govt Higher Secondary School , Dangiwacha Rafiabad Baramulla Kashmir." 
+      <ThreeTexts t1="PCMB 12th Boards" t2="Govt Higher Secondary School , Dangiwacha Rafiabad Baramulla Kashmir." 
       t3={school}
       t4="Sept 2019 - Sept 2021 "
       links={[{l1:"https://drive.google.com/file/d/1t3xIZu66qB-XvXVahJB-8ZZWbjffF9jp/view?usp=drive_link" , l2:"💾 Drive"}]}
 ></ThreeTexts>
-          <div className="hidden md:flex"><RightArrow  linkk="/pros" /></div>
       
-  </div></Layout>
+  </div>
 }
 
 
@@ -91,7 +88,7 @@ const data = (
         <div className="flex flex-col gap-2 mt-2">
           <div className="flex justify-between px-4 py-2 bg-slate-100 rounded-t-md border-b border-slate-300">
             <span className="font-semibold text-slate-700 text-sm md:text-base">Subject</span>
-            <span className="font-bold text-slate-700 text-sm md:text-base">Marks/Percentile</span>
+            <span className="font-bold text-slate-700 text-sm md:text-base">Marks</span>
           </div>
           {Advancedspercentiles.map((p, i) => (
             <div
@@ -171,10 +168,6 @@ const school = (
   <div className="flex flex-col gap-4 rounded-lg border border-slate-200 bg-white shadow-sm p-4">
     <div className="flex flex-col space-y-4">
       <div className="text-slate-700 font-medium text-sm md:text-base">
-        <div className="flex justify-between px-4 py-2">
-          <span className="font-bold">Subject</span>
-          <span className="font-bold">Grade 10</span>
-        </div>
         <div className="flex flex-col gap-2 mt-2">
           <div className="flex justify-between px-4 py-2 bg-slate-100 rounded-t-md border-b border-slate-300">
             <span className="font-semibold text-slate-700 text-sm md:text-base">Subject</span>
