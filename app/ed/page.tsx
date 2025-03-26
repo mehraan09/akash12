@@ -55,9 +55,9 @@ const Advancedspercentiles = [
 ]
 
 const data = (
-  <div className="flex flex-col gap-4 rounded-lg border border-slate-200 bg-white shadow-sm p-4">
+  <div className="flex flex-col gap-4 shadow-sm">
     <div className="list-decimal list-inside space-y-4">
-      <div className="text-slate-700 font-medium text-sm md:text-base">
+      <div className="text-slate-700 font-medium text-sm md:text-base border border-slate-900 rounded-lg  p-4">
         <div className="flex justify-between px-4 py-2">
           <span className="font-bold text-lg">1. JEE Mains 2022</span>
         </div>
@@ -68,7 +68,7 @@ const data = (
           </div>
           {Mainspercentiles.map((p, i) => (
             <div
-              className="flex justify-between px-4 py-3 border-b border-slate-200 last:border-b-0 hover:bg-slate-50 transition-colors duration-150"
+              className="flex justify-between px-4 py-3 border-b border-slate-400 last:border-b-0 hover:bg-slate-50 transition-colors duration-150"
               key={i}
             >
               <span className="font-semibold text-slate-700 text-sm md:text-base">{p.subject}</span>
@@ -81,7 +81,7 @@ const data = (
           </div>
         </div>
       </div>
-      <div className="text-slate-700 font-medium text-sm md:text-base">
+      <div className="text-slate-700 font-medium text-sm md:text-base border border-slate-900 rounded-lg  p-4">
         <div className="flex justify-between px-4 py-2">
           <span className="font-bold text-lg">2. JEE Advanced 2022 </span>
         </div>
@@ -92,7 +92,7 @@ const data = (
           </div>
           {Advancedspercentiles.map((p, i) => (
             <div
-              className="flex justify-between px-4 py-3 border-b border-slate-200 last:border-b-0 hover:bg-slate-50 transition-colors duration-150"
+              className="flex justify-between px-4 py-3 border-b border-slate-400 last:border-b-0 hover:bg-slate-50 transition-colors duration-150"
               key={i}
             >
               <span className="font-semibold text-slate-700 text-sm md:text-base">{p.subject}</span>
@@ -120,14 +120,14 @@ SPIs.forEach((s,i)=>(
 ))
 
 const college = (
-  <div className="flex flex-col gap-4 rounded-lg border border-slate-200 bg-white shadow-sm p-4">
+  <div className="flex flex-col gap-4 rounded-lg border border-slate-900 shadow-sm p-4">
     <div className="flex justify-between px-4 py-2 bg-slate-100 rounded-t-md border-b border-slate-300">
       <span className="font-semibold text-slate-700 text-sm md:text-base">Semester</span>
       <span className="font-bold text-slate-700 text-sm md:text-base">SPI</span>
     </div>
     {SPIs.map((spi, index) => (
       <div
-        className="flex justify-between px-4 py-3 border-b border-slate-200 last:border-b-0 hover:bg-slate-50 transition-colors duration-150"
+        className="flex justify-between px-4 py-3 border-b border-slate-400 last:border-b-0 hover:bg-slate-50 transition-colors duration-150"
         key={index}
       >
         <span className="font-semibold text-slate-700 text-sm md:text-base">
@@ -165,7 +165,7 @@ const schoolMarks = [
  
 ]
 const school = (
-  <div className="flex flex-col gap-4 rounded-lg border border-slate-200 bg-white shadow-sm p-4">
+  <div className="flex flex-col gap-4 rounded-lg border border-slate-900 shadow-sm p-4">
     <div className="flex flex-col space-y-4">
       <div className="text-slate-700 font-medium text-sm md:text-base">
         <div className="flex flex-col gap-2 mt-2">
@@ -175,7 +175,7 @@ const school = (
           </div>
           {schoolMarks.map((s, i) => (
             <div
-              className="flex justify-between px-4 py-3 border-b border-slate-200 last:border-b-0 hover:bg-slate-50 transition-colors duration-150"
+              className="flex justify-between px-4 py-3 border-b border-slate-400 last:border-b-0 hover:bg-slate-50 transition-colors duration-150"
               key={i}
             >
               <span className="font-semibold text-slate-700 text-sm md:text-base">{s.subject}</span>

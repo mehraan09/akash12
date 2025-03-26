@@ -25,7 +25,7 @@ export const dbs = (
     {databases.map((db) => (
       <div
         key={db.name}
-        className="flex justify-between items-center px-4 py-2 border-b border-slate-200 last:border-b-0"
+        className="flex justify-between items-center px-4 py-2 border-b border-slate-900 last:border-b-0"
       >
         <div className="flex items-center gap-2">
           {db.icon}
