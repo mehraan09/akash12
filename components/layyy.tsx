@@ -1,38 +1,23 @@
-// components/Layout.tsx
 "use client"
-import { ReactNode, useEffect } from "react";
+import { useEffect } from "react";
 
-interface LayoutProps {
-  children: ReactNode;
-}
+type LayoutProps = {
+  children: React.ReactNode;
+};
 
 export default function Layout({ children }: LayoutProps) {
   useEffect(() => {
     const handleWheel = (event: WheelEvent) => {
-      if (event.deltaY !== 0) {
-        window.scrollBy({
-          left: event.deltaY * 2,
-        });
-      }
+      event.preventDefault();
+      const scrollAmount = event.deltaY || event.deltaX;
+      window.scrollBy({
+          left: scrollAmount,
+      });
     };
-
-    const handletouch = (event:TouchEvent)=>{
-      if(event.touches[0].clientY!=0){
-        window.scrollBy({
-          left : event.touches[0].clientY * 2 , 
-        })
-      }
-    }
-
-    window.addEventListener("wheel", handleWheel);
-    window.addEventListener("touchmove" , handletouch)
+    window.addEventListener("wheel", handleWheel  , { passive : false });
     return () => {
       window.removeEventListener("wheel", handleWheel);
-      window.removeEventListener("touchmove" , handletouch)
     };
   }, []);
-
   return <div className="">{children}</div>;
 }
-
-
