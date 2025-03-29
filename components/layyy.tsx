@@ -9,7 +9,7 @@ export default function Layout({ children }: LayoutProps) {
   useEffect(() => {
     const handleWheel = (event: WheelEvent) => {
       event.preventDefault();
-      const scrollAmount = event.deltaY || event.deltaX;
+      const scrollAmount = (event.deltaY || event.deltaX) * 0.75;
       window.scrollBy({
           left: scrollAmount,
       });

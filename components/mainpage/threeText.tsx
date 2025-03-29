@@ -23,8 +23,8 @@ export default function ThreeTexts({ t1, t2, t3, t4, links, techs }: t) {
           </p>
           <div className="font-lora text-slate-600 ">{t2}</div>
         </div>
-        <div className="font-iansui text-slate-500 flex-wrap">{t3}</div>
-        <div className="font-iansui text-slate-900  text-right text-md">{t4}</div>
+        <div className="font-iansui  text-slate-500 flex-wrap">{t3}</div>
+        <div className="font-iansui text-gray-800 text-right text-md">{t4}</div>
         <div className="flex gap-4 flex-wrap">
           {techs
             ? techs.map((a) => (

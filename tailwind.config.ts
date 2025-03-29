@@ -23,7 +23,8 @@ export default {
         sp:["Special Elite", "serif"],
         nova: ["Nova Oval", "serif"],
         iansui  : ["Iansui" , "serif"],
-        instru: ["Instrument Serif" , "serif"]
+        instru: ["Instrument Serif" , "serif"],
+        assis : ["Assistant", "sans-serif"]
       },
       // tailwind.config.js
       keyframes: {

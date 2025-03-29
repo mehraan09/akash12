@@ -21,3 +21,13 @@ Accessing the router before the component is mounted: If you try to access the r
 
 ## add fonts 
 > uodate import in global.css
+
+
+
+## Its type '(skills: Skill[], naav: string) => Element' is not a valid JSX element type.
+    Type '(skills: Skill[], naav: string) => Element' is not assignable to type '(props: any) => ReactNode | Promise<ReactNode>'.
+      Target signature provides too few arguments. Expected 2 or more, but got 1.ts(2786)
+
+- synatx to Convert SkillsTemp to a Proper React Component 
+
+> export function SkillsTemp({ skills, naav }: SkillsProps)

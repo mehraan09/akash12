@@ -3,14 +3,12 @@ import { SiDatabricks, SiLinux, SiGnubash } from "react-icons/si"; // Specific i
 import { FaDatabase } from "react-icons/fa"; // For Database Management Systems
 import { GiBrain } from "react-icons/gi"; // For OOP (no specific icon, using a brain as a proxy)
 import { ReactNode } from "react";
-
-// Define a type for competency data
+import { SkillsTemp } from "./skillsTemp";
 interface Competency {
   name: string;
   icon: ReactNode
 }
 
-// Competencies data as an array
 const competencies: Competency[] = [
   {
     name: "Data Structures & Algorithms",
@@ -34,24 +32,6 @@ const competencies: Competency[] = [
   },
 ];
 
-// Main comps constant
 export const comps = (
-  <div className="flex flex-col gap-6">
-    <h3 className="px-4 py-2 text-lg font-lora font-semibold text-slate-900 flex items-center gap-2">
-      <span role="img" aria-label="computer">📚</span>  Computer Science Fundamentals
-    </h3>
-    {competencies.map((comp) => (
-      <div
-        key={comp.name}
-        className="flex justify-between items-center px-4 py-2 border-b border-slate-900 last:border-b-0"
-      >
-        <div className="flex items-center gap-2">
-          {comp.icon}
-          <span className="text-slate-900 font-bold text-sm md:text-base">
-            {comp.name}
-          </span>
-        </div>
-      </div>
-    ))}
-  </div>
+  <SkillsTemp skills={competencies} naav="📚 Computer Science Fundamentals"></SkillsTemp>
 );

@@ -1,7 +1,7 @@
 // Langs.tsx
 import { ReactNode } from "react";
 import { DiCss3, DiHtml5, DiJavascript1, DiSqllite, DiVisualstudio } from "react-icons/di";
-
+import { SkillsTemp } from "./skillsTemp";
 interface Language {
   name: string;
   icon: ReactNode // Support single icon or array for HTML/CSS
@@ -25,22 +25,5 @@ const languages: Language[] = [
 
 // Main Langs constant
 export const Langs = (
-  <div className="flex flex-col gap-6">
-    <h3 className="px-4 py-2 text-lg font-lora font-semibold text-slate-900 flex items-center gap-2">
-      <span role="img" aria-label="computer">🖥️</span> Programming Languages
-    </h3>
-    {languages.map((lang) => (
-      <div
-        key={lang.name}
-        className="flex justify-between items-center px-4 py-2 border-b border-slate-900 last:border-b-0"
-      >
-        <div className="flex items-center gap-2">
-          {lang.icon}
-          <span className="text-slate-900 font-bold text-sm md:text-base">
-            {lang.name}
-          </span>
-        </div>
-      </div>
-    ))}
-  </div>
+  <SkillsTemp naav="🖥️ Programming Languages" skills={languages}></SkillsTemp>
 );

@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { DiVisualstudio } from "react-icons/di";
 import {  SiUbuntu, SiGithub } from "react-icons/si";
+import { SkillsTemp } from "./skillsTemp";
 interface Tool {
   name: string;
   icon: ReactNode
@@ -13,22 +14,5 @@ const toolsData: Tool[] = [
 ];
 
 export const tools = (
-  <div className="flex flex-col gap-6">
-    <h3 className="px-4 py-2 text-lg font-lora font-semibold text-slate-900 flex items-center gap-2">
-      <span role="img" aria-label="tools">🛠️</span> Tools & Platforms
-    </h3>
-    {toolsData.map((tool) => (
-      <div
-        key={tool.name}
-        className="flex justify-between items-center px-4 py-2 border-b border-slate-900 last:border-b-0"
-      >
-        <div className="flex items-center gap-2">
-          {tool.icon}
-          <span className="text-slate-900 font-bold text-sm md:text-base">
-            {tool.name}
-          </span>
-        </div>
-      </div>
-    ))}
-  </div>
+  <SkillsTemp skills={toolsData} naav="🛠️ Tools & Platforms"></SkillsTemp>
 );
