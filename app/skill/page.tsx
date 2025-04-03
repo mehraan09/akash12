@@ -1,19 +1,20 @@
-import ThreeTexts from "@/components/mainpage/threeText"
-import { Langs } from "@/components/skills/lang"
-import { Devs } from "@/components/skills/dev"
-import { dbs } from "@/components/skills/dbs"
-import { tools } from "@/components/skills/tools"
-import { comps } from "@/components/skills/comps"
-import { soft } from "@/components/skills/soft"
+import Langs from "@/components/skills/lang"
+import Devs  from "@/components/skills/dev"
+import Dbs from "@/components/skills/dbs"
+import Tools  from "@/components/skills/tools"
+import  Comps  from "@/components/skills/comps"
+import Soft from "@/components/skills/soft"
+import Devops from "@/components/skills/devops" 
 
 export default function A() {
 
 return <div className="h-screen flex w-max">
-<ThreeTexts   t1="" t3={Langs} ></ThreeTexts>
-<ThreeTexts   t1="" t3={Devs}></ThreeTexts>
-<ThreeTexts   t1="" t3={comps}></ThreeTexts>
-<ThreeTexts   t1="" t3={dbs}></ThreeTexts>
-<ThreeTexts   t1="" t3={soft}></ThreeTexts>
-<ThreeTexts   t1="" t3={tools}></ThreeTexts>
+    <Langs></Langs>
+    <Devs></Devs>
+    <Devops/>
+    <Comps/>
+    <Dbs/>
+    <Soft/>
+    <Tools/>
 </div>
 }

@@ -4,7 +4,7 @@ import { FaPhone } from "react-icons/fa6";
 
 const SocialLinks = () => {
   return (
-    <div className="absolute bottom-8 left-4 md:left-8 flex flex-col gap-4 text-lg">
+    <div className=" absolute bottom-8 left-4 md:left-10 flex flex-col gap-4 text-lg">
       {/* LinkedIn */}
       <a
         href="https://www.linkedin.com/in/akash786/"

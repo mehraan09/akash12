@@ -11,6 +11,7 @@ const databases: Database[] = [
   { name: "PostgreSQL", icon: <SiPostgresql className="text-slate-900 w-6 h-6" /> },
   { name: "Prisma", icon: <SiPrisma className="text-slate-900 w-6 h-6" /> },
 ];
-export const dbs = (
-  <SkillsTemp skills={databases} naav="💾 Databases"></SkillsTemp>
-);
+
+export default function D() {
+ return     <SkillsTemp skills={databases} naav="💾 Databases"></SkillsTemp>
+}

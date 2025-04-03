@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import Link from "next/link";
-
 interface t {
   t1: string;
   t2?: ReactNode;
@@ -15,22 +14,23 @@ interface t {
 
 export default function ThreeTexts({ t1, t2, t3, t4, links, techs }: t) {
   return (
-    <div className="w-[94.8vw] md:w-[28rem] h-full md:border-r border-black">
-      <div className=" h-full flex flex-col justify-between p-8">
+    <div className="w-[94.8vw] md:w-[28rem] h-full md:border-r border-black md:text-sm/6 text-sm tracking-wide relative bg-white-500 ">
+      
+      <div className="h-full flex flex-col justify-between p-8 relative z-10">
         <div className="">
-          <p className="md:text-xl text-xs font-macondo hover:text-red-600 font-bold">
+          <p className="md:text-lg font-macondo hover:text-red-600 font-bold">
             {t1}
           </p>
-          <div className="font-lora text-slate-600 ">{t2}</div>
+          <div className="font-lora text-slate-600 italic">{t2}</div>
         </div>
-        <div className="font-iansui  text-slate-500 flex-wrap">{t3}</div>
-        <div className="font-iansui text-gray-800 text-right text-md">{t4}</div>
-        <div className="flex gap-4 flex-wrap">
+        <div className="font-iansui text-slate-500 flex-wrap">{t3}</div>
+        <div className="font-iansui text-gray-800 text-right text-md italic">{t4}</div>
+        <div className="flex gap-4 flex-wrap md:text-base text-xs">
           {techs
             ? techs.map((a) => (
                 <div
                   key={a}
-                  className="h-8 px-4 border border-indigo-400 rounded-full flex items-center justify-center  text-indigo-600 font-semibold shadow-sm hover:bg-indigo-100 transition-all duration-200"
+                  className="h-8 px-4 border border-indigo-400 rounded-full flex items-center justify-center text-indigo-600 font-semibold shadow-sm hover:bg-indigo-100 transition-all duration-200"
                 >
                   {a}
                 </div>

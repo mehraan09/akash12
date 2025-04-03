@@ -31,3 +31,7 @@ Accessing the router before the component is mounted: If you try to access the r
 - synatx to Convert SkillsTemp to a Proper React Component 
 
 > export function SkillsTemp({ skills, naav }: SkillsProps)
+
+
+## check 
+preload : false 

@@ -13,8 +13,6 @@ const devTools: DevTool[] = [
   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-slate-900 w-6 h-6" /> },
 ];
 
-const Devs = (
-  <SkillsTemp naav="⚡ Development & Frameworks" skills={devTools}></SkillsTemp>
-);
-
-export { Devs };
+export default function D() {
+ return <SkillsTemp naav="⚡ Development & Frameworks" skills={devTools}></SkillsTemp>
+}

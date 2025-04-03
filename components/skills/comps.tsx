@@ -32,6 +32,7 @@ const competencies: Competency[] = [
   },
 ];
 
-export const comps = (
-  <SkillsTemp skills={competencies} naav="📚 Computer Science Fundamentals"></SkillsTemp>
-);
+
+export default function C() {
+ return <SkillsTemp skills={competencies} naav="📚 Computer Science Fundamentals"></SkillsTemp>
+}

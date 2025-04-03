@@ -19,5 +19,5 @@ export default function Layout({ children }: LayoutProps) {
       window.removeEventListener("wheel", handleWheel);
     };
   }, []);
-  return <div className="">{children}</div>;
+  return <div >{children}</div>;
 }

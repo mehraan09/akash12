@@ -9,11 +9,13 @@ import Me from "@/components/mySelf";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  preload : false
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  preload : false
 });
 
 // Metadata for SEO and social sharing
@@ -22,6 +24,7 @@ export const metadata: Metadata = {
   description: "Hi There!",
   keywords: [
     "Akash Ahmad Malik",
+    "vin kya karas be cxei wan" ,
     "software developer",
     "portfolio",
     "web development",
@@ -33,17 +36,17 @@ export const metadata: Metadata = {
   authors: [{ name: "Akash Ahmad Malik" }],
   robots: "index, follow",
   icons: {
-    icon: "/image.png", // Ensure this file exists in /public
+    icon: "/image.png",
   },
   openGraph: {
     title: "Akash Ahmad Malik - Portfolio",
     description:
-      "Explore the personal portfolio of Akash Ahmad Malik, featuring software development projects and technical skills.",
-    url: "https://akash09.vercel.app", // Replace with your actual domain
+      "Hi There!",
+    url: "https://akash09.vercel.app", 
     siteName: "Akash Ahmad Malik",
     images: [
       {
-        url: "https://your-domain.vercel.app/image.png", // Update domain
+        url: "https://your-domain.vercel.app/image.png", 
         width: 1200,
         height: 630,
         alt: "Akash Ahmad Malik Portfolio Preview",
@@ -57,12 +60,11 @@ export const metadata: Metadata = {
     title: "Akash Ahmad Malik - Portfolio",
     description:
       "Check out Akash Ahmad Malik's portfolio for software projects and tech skills.",
-    creator: "@Aakash41339611", // Replace with your Twitter handle
-    images: ["https://your-domain.vercel.app/image.png"], // Update domain
+    creator: "@Aakash41339611",
+    images: ["https://your-domain.vercel.app/image.png"], 
   },
 };
 
-// Define viewport for responsive design
 export const viewport: Viewport = {
   width: "device-width",
   height: "device-height",
@@ -77,20 +79,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-thin bcg`}
-      >
-        <div className="fixed left-0 h-screen md:w-[5rem] w-[5vw] md:border-r border-black z-50 bcg">
-          <Me/>
+      className={`${geistSans.variable} ${geistMono.variable} h-screen antialiased font-thin overflow-x-auto small-scrollbar bcg `}
+>
+        <div className="fixed left-0 h-screen md:w-[6rem] w-[5vw] md:border-r border-black z-50 bcg">
+        <Me/>
         </div>
         <Layout>
-        <div className="ml-[5vw] md:ml-[5rem] h-screen flex z-10">
-          <NavBar />
-          <div className="flex-grow">
-          {children}
-          </div>
-          <div className="md:flex hidden"><Arrow /></div>
-          <div className="fixed right-12 top-12 md:hidden"><Arrow /></div>
-          </div>
+        <div className="ml-[5vw] md:ml-[6rem] h-screen flex">
+        <NavBar/>
+          <div className="flex-grow z-20">{children} </div>
+          <div className="md:flex hidden z-30"><Arrow /></div>
+          <div className="fixed right-12 top-12 md:hidden z-30"><Arrow /></div>
+        </div>
         </Layout>
       </body>
     </html>

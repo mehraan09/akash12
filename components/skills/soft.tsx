@@ -28,6 +28,8 @@ const softSkills: SoftSkill[] = [
     icon: <FaBookOpen className="text-slate-900 w-6 h-6" />
   },
 ];
-export const soft = (
-  <SkillsTemp skills={softSkills} naav="🤝 Soft Skills" ></SkillsTemp>
-);
+
+export default function S() {
+ return   <SkillsTemp skills={softSkills} naav="🤝 Soft Skills" ></SkillsTemp>
+
+}

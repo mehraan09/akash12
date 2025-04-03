@@ -13,6 +13,6 @@ const toolsData: Tool[] = [
   { name: "GitHub", icon: <SiGithub className="text-slate-900 w-6 h-6" /> },
 ];
 
-export const tools = (
-  <SkillsTemp skills={toolsData} naav="🛠️ Tools & Platforms"></SkillsTemp>
-);
+export default function T() {
+ return   <SkillsTemp skills={toolsData} naav="🛠️ Tools & Platforms"></SkillsTemp>
+}

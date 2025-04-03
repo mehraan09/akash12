@@ -14,16 +14,18 @@ const Home = () => {
       l2: "📄 Resume"
     }]
   };
+
   return (
       <div className="h-screen flex w-max">
-            <ThreeTexts
+        <ThreeTexts
               t1={content.greeting}
               t2={content.title}
               t3={content.connect}
               t4={content.description}
               links={content.links}
             />
-            <Twoo />
+
+            <Twoo/>
             </div>
   );
 };

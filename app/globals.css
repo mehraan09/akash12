@@ -17,9 +17,25 @@
     height: 100%;
   } */
     
+
 body { 
   width: 100%; height: 100%; overflow:hidden;
 }
 .bcg {
-  background-color: rgba(235, 253, 253, 0.99);
+  background-color: rgba(231, 249, 251, 0.99);
+}
+
+/* Custom Scrollbar */
+.small-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+  height: 6px; /* Height for horizontal scrollbar */
+}
+
+.small-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #6b7280; /* Gray-500 */
+  border-radius: 10px;
+}
+
+.small-scrollbar::-webkit-scrollbar-track {
+  background-color: #e5e7eb; /* Gray-200 */
 }

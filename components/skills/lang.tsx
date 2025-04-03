@@ -1,4 +1,3 @@
-// Langs.tsx
 import { ReactNode } from "react";
 import { DiCss3, DiHtml5, DiJavascript1, DiSqllite, DiVisualstudio } from "react-icons/di";
 import { SkillsTemp } from "./skillsTemp";
@@ -23,7 +22,6 @@ const languages: Language[] = [
   },
 ];
 
-// Main Langs constant
-export const Langs = (
-  <SkillsTemp naav="🖥️ Programming Languages" skills={languages}></SkillsTemp>
-);
+export default function Langs () {
+  return <SkillsTemp naav="🖥️ Programming Languages" skills={languages}></SkillsTemp>
+}
