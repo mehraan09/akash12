@@ -3,7 +3,7 @@ import ThreeTexts from "@/components/mainpage/threeText";
 
 const Home = () => {
   const content = {
-    greeting: "Hi There! 👋 I'm Athar Nazir Malik",
+    greeting: "Hi There! 👋 I'm Akash Ahmad Malik",
     title: "🚀 Full-Stack Web Developer | Problem Solver | Cricket Enthusiast.",
     description: `I’m a software engineer passionate about development, design, and performance. 
       Currently, I am seeking an internship opportunity where I can apply my technical skills in a real-world setting, collaborate with experienced professionals, 
