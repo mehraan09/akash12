@@ -13,7 +13,6 @@ export default {
         foreground: "var(--foreground)",
       } ,
       fontFamily: {
-        roboto: ['"Roboto"', 'sans-serif'],
         lora: ['"Lora"', 'serif'],
         custom: ['"CustomFont"', 'monospace'], 
         mono: ['"JetBrains Mono"', 'monospace'], 

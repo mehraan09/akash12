@@ -35,3 +35,6 @@ Accessing the router before the component is mounted: If you try to access the r
 
 ## check 
 preload : false 
+
+
+## can we add tailwind operations on top of ${macondo.className} ???
