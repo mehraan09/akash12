@@ -27,10 +27,16 @@ export const metadata: Metadata = {
   icons: {
     icon: "/image.png",
   },
-  openGraph: {
-    title: "Akash Ahmad Malik - Portfolio",
+  twitter: {
+    card: "summary_large_image",
+    title: "Akash Ahmad Malik's Portfolio",
     description:
-      "Hi There!",
+      "Check out Akash Ahmad Malik's portfolio for software projects and tech skills.",
+    creator: "@Aakash41339611",
+    images: ["akash.jpeg"], 
+  },
+  openGraph: {
+    title: "Checkout Akash Ahmad Malik's Portfolio",
     url: "https://akash09.vercel.app", 
     siteName: "Akash Ahmad Malik",
     images: [
@@ -43,15 +49,7 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Akash Ahmad Malik's Portfolio",
-    description:
-      "Check out Akash Ahmad Malik's portfolio for software projects and tech skills.",
-    creator: "@Aakash41339611",
-    images: ["akash.jpeg"], 
-  },
+  }
 };
 
 export const viewport: Viewport = {
