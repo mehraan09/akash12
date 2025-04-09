@@ -1,4 +1,10 @@
 import ThreeTexts from "@/components/mainpage/threeText"
+import { Metadata } from "next"
+
+export const metadata : Metadata = {
+    title : "Extras "
+  }
+
 import Image from "next/image";
 export default function A() {
 return <div className="h-screen flex w-max">

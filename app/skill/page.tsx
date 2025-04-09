@@ -5,6 +5,11 @@ import Tools  from "@/components/skills/tools"
 import  Comps  from "@/components/skills/comps"
 import Soft from "@/components/skills/soft"
 import Devops from "@/components/skills/devops" 
+import { Metadata } from "next"
+
+export const metadata : Metadata = {
+    title : "Skills "
+  }
 
 export default function A() {
 

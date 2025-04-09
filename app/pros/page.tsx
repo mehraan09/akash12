@@ -1,4 +1,10 @@
 import ThreeTexts from "@/components/mainpage/threeText";
+import { Metadata } from "next"
+
+export const metadata : Metadata = {
+    title : "Projects "
+  }
+
 import { SiNextdotjs, SiTurborepo, SiPostgresql, SiTypescript, SiExpress, SiPrisma, SiTailwindcss, SiHono, SiReact, SiCloudflare, SiMongodb } from "react-icons/si";
 
 export default function A() {

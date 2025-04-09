@@ -19,7 +19,7 @@ export default function ThreeTexts({ t1, t2, t3, t4, links, techs }: t) {
       
       <div className="h-full flex flex-col justify-between p-8 relative z-10">
         <div className="">
-          <p className={`md:text-lg font-macondo hover:text-red-600 text-slate-900 font-bold`}>
+          <p className={`md:text-lg font-macondo hover:text-red-600 text-slate-900 font-extrabold`}>
             {t1}
           </p>
           <div className="font-lora text-slate-600 italic">{t2}</div>

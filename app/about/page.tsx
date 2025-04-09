@@ -1,4 +1,10 @@
 import ThreeTexts from "@/components/mainpage/threeText"
+import { Metadata } from "next"
+
+export const metadata : Metadata = {
+    title : "About "
+  }
+
 export default function A() {
 return <div className="h-screen flex w-max">
 <ThreeTexts t1="" t3="I am a passionate full-stack developer with expertise in C++, JavaScript, TypeScript, and SQL. I specialize in building scalable and efficient web applications using modern frameworks like React, Next.js, Node.js, and Express.js. With a strong foundation in data structures, algorithms, and operating systems, I craft optimized solutions for complex problems." 
