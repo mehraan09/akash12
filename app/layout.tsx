@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template : "Akash %s" , 
     default : "Akash Ahmad Malik - Portfolio"
   },
-  description: "Hi There!",
+  description: "Hi There! Let's build cool things together. You in? 👾",
   keywords: [
     "Akash Ahmad Malik",
     "vin kya karas be cxei wan" ,
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "akash.jpeg", 
-        width: 1200,
-        height: 630,
+        width: 600,
+        height: 600,
         alt: "Akash Ahmad Malik Portfolio Preview",
       },
     ],
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Akash Ahmad Malik - Portfolio",
+    title: "Akash Ahmad Malik's Portfolio",
     description:
       "Check out Akash Ahmad Malik's portfolio for software projects and tech skills.",
     creator: "@Aakash41339611",
