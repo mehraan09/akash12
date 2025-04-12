@@ -40,7 +40,8 @@ export default {
       },
       animation: {
         'bounce-x': 'bounce-x 1s infinite',
-}
+},
+
     },
   },
   plugins: [],

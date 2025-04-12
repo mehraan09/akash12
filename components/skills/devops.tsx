@@ -8,11 +8,11 @@ interface Skill {
 }
 
 const devops: Skill[] = [
-  { name: "AWS", icon: <DiAws className="text-slate-900 w-6 h-6" /> },
-  { name: "Docker", icon: <DiDocker className="text-slate-900 w-6 h-6" /> },
-  { name: "Monorepos", icon: <DiDatabase className="text-slate-900 w-6 h-6" /> }, 
-  { name: "Redis", icon: <DiRedis className="text-slate-900 w-6 h-6" /> },
-  { name: "WebSockets", icon: <DiWebplatform className="text-slate-900 w-6 h-6" /> },
+  { name: "AWS", icon: <DiAws className=" w-6 h-6" /> },
+  { name: "Docker", icon: <DiDocker className=" w-6 h-6" /> },
+  { name: "Monorepos", icon: <DiDatabase className=" w-6 h-6" /> }, 
+  { name: "Redis", icon: <DiRedis className=" w-6 h-6" /> },
+  { name: "WebSockets", icon: <DiWebplatform className=" w-6 h-6" /> },
 ];
 
 export default function D() {

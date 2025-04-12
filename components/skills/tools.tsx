@@ -8,9 +8,9 @@ interface Tool {
 }
 
 const toolsData: Tool[] = [
-  { name: "VS Code", icon: <DiVisualstudio className="text-slate-900 w-6 h-6" /> },
-  { name: "Ubuntu Linux", icon: <SiUbuntu className="text-slate-900 w-6 h-6" /> },
-  { name: "GitHub", icon: <SiGithub className="text-slate-900 w-6 h-6" /> },
+  { name: "VS Code", icon: <DiVisualstudio className=" w-6 h-6" /> },
+  { name: "Ubuntu Linux", icon: <SiUbuntu className=" w-6 h-6" /> },
+  { name: "GitHub", icon: <SiGithub className=" w-6 h-6" /> },
 ];
 
 export default function T() {

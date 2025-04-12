@@ -6,10 +6,10 @@ interface Database {
   icon: ReactNode
 }
 const databases: Database[] = [
-  { name: "MongoDB", icon: <SiMongodb className="text-slate-900 w-6 h-6" /> },
-  { name: "MySQL", icon: <SiMysql className="text-slate-900 w-6 h-6" /> },
-  { name: "PostgreSQL", icon: <SiPostgresql className="text-slate-900 w-6 h-6" /> },
-  { name: "Prisma", icon: <SiPrisma className="text-slate-900 w-6 h-6" /> },
+  { name: "MongoDB", icon: <SiMongodb className=" w-6 h-6" /> },
+  { name: "MySQL", icon: <SiMysql className=" w-6 h-6" /> },
+  { name: "PostgreSQL", icon: <SiPostgresql className=" w-6 h-6" /> },
+  { name: "Prisma", icon: <SiPrisma className=" w-6 h-6" /> },
 ];
 
 export default function D() {

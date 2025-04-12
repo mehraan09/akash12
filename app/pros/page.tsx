@@ -87,7 +87,7 @@ const data3 = (
 const t4DriftPro = (
   <div className="flex gap-4 flex-wrap">
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiNextdotjs className="w-5 h-5 mr-1 " /> <span className="font-roboto font-bold">Next.js</span>
+      <SiNextdotjs className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">Next.js</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
       <SiTurborepo className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">Turborepo</span>

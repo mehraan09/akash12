@@ -15,26 +15,39 @@ const navs = [
 ];
 
 export default function NavBar() {
-const pathname = usePathname()
-    return (
-        <div className="relative md:w-[22vw] md:border-r border-black">
+  const pathname = usePathname()
 
-        <div className="md:ml-2 mt-6 w-0 md:w-[22vw] gap-2 md:gap-0 md:p-3 font-semibold font-lora text-sm z-0">
-          <div className='hidden md:flex flex-col'>
-          {navs.map((n,i)=>(
+  return (
+    <div className="relative md:w-[22vw] md:border-r border-black dark:border-white z-50 transition-colors duration-300">
+      <div className="md:ml-2 mt-6 w-0 md:w-[22vw] gap-2 md:gap-0 md:p-3 font-semibold font-lora text-sm z-0">
+        <div className="hidden md:flex flex-col">
+          {navs.map((n, i) => (
             <div className="flex items-center md:justify-start justify-center mb-4" key={i}>
-            <div className={`w-5 h-5 hidden md:flex border-2 border-black rounded-full flex items-center justify-center m-1 font-montserrat text-xs ${n.color}`}>{++i}</div>
-            <span className={`tracking-widest font-instru p-1 m-0 text-${n.color} hover:text-red-500 ${pathname === n.route ? 'text-red-500' : ''} `}>
-            <Link href={n.route}>{n.nav}</Link>
-            </span>
+                <Link href={n.route}>
+                <div className='flex '>
+              <div
+                className={`w-5 h-5 hidden md:flex items-center justify-center m-1 mr-4 font-montserrat text-xs ${n.color} border border-black dark:border-white `}
+              >
+                {i + 1}
+              </div>
+              <span
+                className={`tracking-widest font-instru p-1 m-0 transition-colors duration-200 ${
+                  pathname === n.route
+                    ? 'text-red-500'
+                    : 'text-black dark:text-white hover:text-red-500'
+                }`}
+              >
+                {n.nav}
+              </span>
+              </div>
+              </Link>
             </div>
-            ))}
-          </div>
+          ))}
         </div>
-        </div>
-    )
+      </div>
+    </div>
+  )
 }
-
 export function Arrow () {
 const pathname = usePathname()
 const index = navs.findIndex((n) => n.route === pathname);

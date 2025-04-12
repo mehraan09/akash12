@@ -7,7 +7,7 @@ export const metadata : Metadata = {
 
 import Image from "next/image";
 export default function A() {
-return <div className="h-screen flex w-max">
+return <div className="h-screen flex w-max dark:hidden">
 <ThreeTexts t1="Extras" t2="" t4={<Image src="/image.png" width={300} height={300} alt="thank you"></Image>}></ThreeTexts>
 </div> 
     }
