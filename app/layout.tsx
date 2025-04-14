@@ -73,11 +73,11 @@ export default function RootLayout({
         <div className="fixed inset-0 z-0">
           <PlanetOrbit></PlanetOrbit>
         </div>
-        <div className="fixed left-0 h-screen md:w-[6rem] w-[5vw] md:border-r dark:border-white border-black bg-[#e6f9ff] dark:bg-[#1a1f23] z-[100]">
+        <div className="fixed md:top-[2vh] md:left-[1vw] md:h-[96vh] h-screen md:w-[6rem] w-[5vw] md:border rounded-lg dark:border-white border-black bg-[#e6f9ff] dark:bg-[#1a1f23] z-[100]">
           <Me />
         </div>
         <Layout>
-          <div className="ml-[5vw] md:ml-[6rem] h-screen flex z-40 ">
+          <div className="ml-[6vw] md:ml-[7rem] h-screen flex z-40 ">
             <NavBar />
             <div className={`flex-grow z-20 `}>{children}</div>
             <div className="md:flex hidden z-30">

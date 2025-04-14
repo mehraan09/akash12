@@ -87,25 +87,25 @@ const data3 = (
 const t4DriftPro = (
   <div className="flex gap-4 flex-wrap">
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiNextdotjs className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">Next.js</span>
+      <SiNextdotjs className="w-5 h-5 mr-1" /> <span className="">Next.js</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiTurborepo className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">Turborepo</span>
+      <SiTurborepo className="w-5 h-5 mr-1" /> <span className="">Turborepo</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiPostgresql className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">PostgreSQL</span>
+      <SiPostgresql className="w-5 h-5 mr-1" /> <span className="">PostgreSQL</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiTypescript className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">TypeScript</span>
+      <SiTypescript className="w-5 h-5 mr-1" /> <span className="">TypeScript</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiExpress className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">Express</span>
+      <SiExpress className="w-5 h-5 mr-1" /> <span className="">Express</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiPrisma className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">Prisma ORM</span>
+      <SiPrisma className="w-5 h-5 mr-1" /> <span className="">Prisma ORM</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiTailwindcss className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">Tailwind CSS</span>
+      <SiTailwindcss className="w-5 h-5 mr-1" /> <span className="">Tailwind CSS</span>
     </div>
   </div>
 );
@@ -113,25 +113,25 @@ const t4DriftPro = (
 const t4MediumPro = (
   <div className="flex gap-4 flex-wrap">
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiTypescript className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">TypeScript</span>
+      <SiTypescript className="w-5 h-5 mr-1" /> <span className="">TypeScript</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiPrisma className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">Prisma</span>
+      <SiPrisma className="w-5 h-5 mr-1" /> <span className="">Prisma</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiPostgresql className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">PostgreSQL</span>
+      <SiPostgresql className="w-5 h-5 mr-1" /> <span className="">PostgreSQL</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiHono className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">Hono</span>
+      <SiHono className="w-5 h-5 mr-1" /> <span className="">Hono</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiReact className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">React</span>
+      <SiReact className="w-5 h-5 mr-1" /> <span className="">React</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiTailwindcss className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">Tailwind CSS</span>
+      <SiTailwindcss className="w-5 h-5 mr-1" /> <span className="">Tailwind CSS</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiCloudflare className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">Cloudflare</span>
+      <SiCloudflare className="w-5 h-5 mr-1" /> <span className="">Cloudflare</span>
     </div>
   </div>
 );
@@ -139,13 +139,13 @@ const t4MediumPro = (
 const t4CollegeDBMS = (
   <div className="flex gap-4 flex-wrap">
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiExpress className="w-5 h-5 mr-1 font-bold" /> <span className="font-roboto font-bold">Express</span>
+      <SiExpress className="w-5 h-5 mr-1 font-bold" /> <span className="">Express</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiMongodb className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">MongoDB</span>
+      <SiMongodb className="w-5 h-5 mr-1" /> <span className="">MongoDB</span>
     </div>
     <div className="rounded-full h-8 px-4 border border-indigo-400 flex items-center">
-      <SiReact className="w-5 h-5 mr-1" /> <span className="font-roboto font-bold">React</span>
+      <SiReact className="w-5 h-5 mr-1" /> <span className="">React</span>
     </div>
   </div>
 );

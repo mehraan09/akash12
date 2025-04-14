@@ -15,23 +15,22 @@ interface t {
 
 export default function ThreeTexts({ t1, t2, t3, t4, links, techs }: t) {
   return (
-    <div className="w-[94.8vw] md:w-[28rem] h-full md:border-r border-black dark:border-white md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
-      
+    <div className=" w-[94.8vw] md:w-[28rem]  md:border border-black rounded-2xl md:m-4  dark:border-white md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
       <div className="h-full flex flex-col justify-between p-8 relative z-10">
         <div>
-          <p className="md:text-lg font-macondo font-bold text-black dark:text-cyan-100 hover:text-red-700 dark:hover:text-red-400">
+          <p className="md:text-lg font-macondo font-bold dark:text-cyan-100 hover:text-red-700 dark:hover:text-red-400">
             {t1}
           </p>
-          <div className="font-lora italic text-black dark:text-cyan-100 mt-1">
+          <div className="font-iansui italic dark:text-cyan-100 mt-1">
             {t2}
           </div>
         </div>
 
-        <div className="font-iansui text-black dark:text-cyan-100 flex-wrap mt-4">
+        <div className="font-iansui italic dark:text-cyan-100 flex-wrap mt-4">
           {t3}
         </div>
 
-        <div className="font-iansui text-right italic text-md text-black dark:text-cyan-100 mt-4">
+        <div className="font-iansui text-right text-md dark:text-cyan-100 mt-4">
           {t4}
         </div>
 
@@ -40,7 +39,7 @@ export default function ThreeTexts({ t1, t2, t3, t4, links, techs }: t) {
             techs.map((a) => (
               <div
                 key={a}
-                className="h-8 px-4 border border-indigo-400 rounded-full flex items-center justify-center text-indigo-700 dark:text-indigo-300 font-medium shadow-sm hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-all duration-200"
+                className="font-iansui h-8 px-4 border border-indigo-400 rounded-full flex items-center justify-center text-indigo-700 dark:text-indigo-300 font-medium shadow-sm hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-all duration-200"
               >
                 {a}
               </div>

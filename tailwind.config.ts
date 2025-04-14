@@ -1,29 +1,20 @@
 import type { Config } from "tailwindcss";
 export default {
+  darkMode: 'class', // disabed dark mode for now
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    darkMode: 'media',
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       } ,
       fontFamily: {
-        lora: ['"Lora"', 'serif'],
-        custom: ['"CustomFont"', 'monospace'], 
-        mono: ['"JetBrains Mono"', 'monospace'], 
-        montserrat: ['"Montserrat"', 'sans-serif'],
-        regularFont: ['"regularFont"', 'sans-serif'],
         macondo: ["Macondo Swash Caps", "cursive"],
-        sp:["Special Elite", "serif"],
-        nova: ["Nova Oval", "serif"],
         iansui  : ["Iansui" , "serif"],
-        instru: ["Instrument Serif" , "serif"],
-        assis : ["Assistant", "sans-serif"]
       },
       // tailwind.config.js
       keyframes: {

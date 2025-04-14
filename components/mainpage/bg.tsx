@@ -4,7 +4,7 @@ import "./Background.css";
 const planetData = [
   { size: "w-2 h-2", color: "bg-gray-400", orbitW: "w-[15vh]", orbitH: "h-[15vh]", duration: "spin-planet-2" },
   { size: "w-3 h-3", color: "bg-blue-300", orbitW: "w-[25vh]", orbitH: "h-[25vh]", duration: "spin-planet-3" },
-  { size: "w-4 h-4", color: "bg-red-300", orbitW: "w-[37vh]", orbitH: "h-[37vh]", duration: "spin-planet-4" },
+  { size: "w-4 h-4", color: "bg-red-300", orbitW: "w-[37vh]", orbitH: "h-[37vh]", duration: "spin-planet-3" },
   { size: "w-[1.125rem] h-[1.125rem]", color: "bg-green-300", orbitW: "w-[52vh]", orbitH: "h-[52vh]", duration: "spin-planet-5" },
   { size: "w-5 h-5", color: "bg-indigo-300", orbitW: "w-[68vh]", orbitH: "h-[68vh]", duration: "spin-planet-6" },
   { size: "w-[1.375rem] h-[1.375rem]", color: "bg-yellow-200", orbitW: "w-[84vh]", orbitH: "h-[84vh]", duration: "spin-planet-7" },
@@ -26,7 +26,7 @@ const PlanetOrbit = () => {
       key={i}
       className={`absolute rounded-full ${planet.orbitH} ${planet.orbitW} animate-${planet.duration}
         border border-zinc-400/30 dark:white/10 backdrop-blur-[.2px] opacity-30`}
-    >
+      >
       <div
         className={`absolute top-1/2 left-full transform -translate-x-1/2 -translate-y-1/2 
           rounded-full transition-all duration-300 ease-in-out 
