@@ -1,0 +1,35 @@
+import { Octokit } from '@octokit/rest';
+
+export interface Issue {
+    title: string;
+    state: 'open' | 'closed';
+    createdAt: string;
+    url : string
+}
+  
+export async function getIssues(repo: string): Promise<Issue[] | null> {
+    const token = process.env.GIT_TOKEN;
+
+    const octokit = new Octokit({
+        auth: token
+      })
+    const response =  await octokit.request('GET /repos/{owner}/{repo}/issues', {
+        owner: 'Akasho09',
+        repo: repo ,
+        headers: {
+          'X-GitHub-Api-Version': '2022-11-28'
+        }
+      })
+
+    if (!response || !Array.isArray(response.data)) return null;
+
+    const returnData: Issue[] = response.data.map((d: any) => ({
+      title: d.title,
+      state: d.state,
+      createdAt: String(new Date (d.created_at).toLocaleDateString()),
+      url : d.html_url
+    }));
+  
+    return returnData;
+  }
+  

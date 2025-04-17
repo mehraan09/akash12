@@ -1,35 +1,17 @@
-import { GiBrain, GiTeamIdea } from "react-icons/gi"; // Proxy icons for abstract skills
-import { FaComments, FaLightbulb , FaBookOpen} from "react-icons/fa"; // Communication and problem-solving proxies
 import { ReactNode } from "react";
-import { SkillsTemp } from "./skillsTemp";
-interface SoftSkill {
-  name: string;
-  icon: ReactNode
-}
-const softSkills: SoftSkill[] = [
-  {
-    name: "Analytical Thinking",
-    icon: <GiBrain className=" w-6 h-6" />, // Brain for analytical thinking
-  },
-  {
-    name: "Problem-solving",
-    icon: <FaLightbulb className=" w-6 h-6" />, // Lightbulb for problem-solving
-  },
-  {
-    name: "Communication Skills",
-    icon: <FaComments className=" w-6 h-6" />, // Comments for communication
-  },
-  {
-    name: "Teamwork",
-    icon: <GiTeamIdea className=" w-6 h-6" />, // Team idea for teamwork
-  },
-  {
-    name : "Continuous Learning" , 
-    icon: <FaBookOpen className=" w-6 h-6" />
-  },
+import { GiBrain, GiTeamIdea } from "react-icons/gi";
+import { FaComments, FaLightbulb, FaBookOpen } from "react-icons/fa";
+import { SkillsTemp } from "./SkillsTemp";
+import TechButton from "./TechButton";
+
+const softSkills: ReactNode[] = [
+  <TechButton key="thinking" to="#" techName="Analytical Thinking" Icon={GiBrain} />,
+  <TechButton key="problem" to="#" techName="Problem-solving" Icon={FaLightbulb} />,
+  <TechButton key="comm" to="#" techName="Communication" Icon={FaComments} />,
+  <TechButton key="team" to="#" techName="Teamwork" Icon={GiTeamIdea} />,
+  <TechButton key="learning" to="#" techName="Continuous Learning" Icon={FaBookOpen} />,
 ];
 
-export default function S() {
- return   <SkillsTemp skills={softSkills} naav="🤝 Soft Skills" ></SkillsTemp>
-
+export default function SoftSkillsSection() {
+  return <SkillsTemp naav="🤝 Soft Skills" skills={softSkills} />;
 }

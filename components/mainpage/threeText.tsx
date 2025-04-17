@@ -15,7 +15,7 @@ interface t {
 
 export default function ThreeTexts({ t1, t2, t3, t4, links, techs }: t) {
   return (
-    <div className=" w-[94.8vw] md:w-[28rem]  md:border border-black rounded-2xl md:m-4  dark:border-white md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
+    <div className="w-[94.8vw] md:w-[28rem]  md:border border-black rounded-lg md:m-4 dark:border-white md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
       <div className="h-full flex flex-col justify-between p-8 relative z-10">
         <div>
           <p className="md:text-lg font-macondo font-bold dark:text-cyan-100 hover:text-red-700 dark:hover:text-red-400">

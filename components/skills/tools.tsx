@@ -1,18 +1,15 @@
 import { ReactNode } from "react";
 import { DiVisualstudio } from "react-icons/di";
-import {  SiUbuntu, SiGithub } from "react-icons/si";
-import { SkillsTemp } from "./skillsTemp";
-interface Tool {
-  name: string;
-  icon: ReactNode
-}
+import { SiUbuntu, SiGithub } from "react-icons/si";
+import { SkillsTemp } from "./SkillsTemp";
+import TechButton from "./TechButton";
 
-const toolsData: Tool[] = [
-  { name: "VS Code", icon: <DiVisualstudio className=" w-6 h-6" /> },
-  { name: "Ubuntu Linux", icon: <SiUbuntu className=" w-6 h-6" /> },
-  { name: "GitHub", icon: <SiGithub className=" w-6 h-6" /> },
+const tools: ReactNode[] = [
+  <TechButton key="vscode" to="#" techName="VS Code" Icon={DiVisualstudio} />,
+  <TechButton key="ubuntu" to="#" techName="Ubuntu" Icon={SiUbuntu} />,
+  <TechButton key="github" to="#" techName="GitHub" Icon={SiGithub} />,
 ];
 
-export default function T() {
- return   <SkillsTemp skills={toolsData} naav="🛠️ Tools & Platforms"></SkillsTemp>
+export default function ToolsSection() {
+  return <SkillsTemp naav="🧰 Tools & Platforms" skills={tools} />;
 }

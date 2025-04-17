@@ -1,38 +1,18 @@
-// comps.tsx
-import { SiDatabricks, SiLinux, SiGnubash } from "react-icons/si"; // Specific icons where available
-import { FaDatabase } from "react-icons/fa"; // For Database Management Systems
-import { GiBrain } from "react-icons/gi"; // For OOP (no specific icon, using a brain as a proxy)
 import { ReactNode } from "react";
-import { SkillsTemp } from "./skillsTemp";
-interface Competency {
-  name: string;
-  icon: ReactNode
-}
+import { SiDatabricks, SiLinux, SiGnubash } from "react-icons/si";
+import { FaDatabase } from "react-icons/fa";
+import { GiBrain } from "react-icons/gi";
+import { SkillsTemp } from "./SkillsTemp";
+import TechButton from "./TechButton";
 
-const competencies: Competency[] = [
-  {
-    name: "Data Structures & Algorithms",
-    icon: <SiDatabricks className=" w-6 h-6 " />, // Proxy for data structures
-  },
-  {
-    name: "Operating Systems",
-    icon: <SiLinux className=" w-6 h-6" />, // Linux as a proxy for OS
-  },
-  {
-    name: "Object-Oriented Programming",
-    icon: <GiBrain className="w-6 h-6" />, // Brain as a conceptual proxy
-  },
-  {
-    name: "Database Management Systems",
-    icon: <FaDatabase className="w-6 h-6" />, // Generic database icon
-  },
-  {
-    name: "Shell Scripting",
-    icon: <SiGnubash className="w-6 h-6" />, // Bash icon for shell scripting
-  },
+const fundamentals: ReactNode[] = [
+  <TechButton key="dsa" to="#" techName="DSA" Icon={SiDatabricks} />,
+  <TechButton key="os" to="#" techName="Operating Systems" Icon={SiLinux} />,
+  <TechButton key="oop" to="#" techName="OOP" Icon={GiBrain} />,
+  <TechButton key="dbms" to="#" techName="DBMS" Icon={FaDatabase} />,
+  <TechButton key="shell" to="#" techName="Shell Scripting" Icon={SiGnubash} />,
 ];
 
-
-export default function C() {
- return <SkillsTemp skills={competencies} naav="📚 Computer Science Fundamentals"></SkillsTemp>
+export default function FundamentalsSection() {
+  return <SkillsTemp naav="📚 CS Fundamentals" skills={fundamentals} />;
 }
