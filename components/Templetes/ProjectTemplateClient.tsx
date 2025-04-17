@@ -1,5 +1,5 @@
 "use client";
-import { ReactNode, useState , lazy } from "react";
+import { ReactNode, useState  } from "react";
 import Link from "next/link";
 import { Issue } from "@/lib/github";
 import { IoIosArrowDown } from "react-icons/io";

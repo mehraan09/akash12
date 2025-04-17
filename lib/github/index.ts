@@ -23,6 +23,7 @@ export async function getIssues(repo: string): Promise<Issue[] | null> {
 
     if (!response || !Array.isArray(response.data)) return null;
 
+// for JS only no types by github
     const returnData: Issue[] = response.data.map((d: any) => ({
       title: d.title,
       state: d.state,

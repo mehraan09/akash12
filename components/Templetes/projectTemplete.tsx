@@ -1,5 +1,5 @@
 import { getIssues } from "@/lib/github";
-import { ReactNode ,Suspense,lazy } from "react";
+import { ReactNode ,Suspense } from "react";
 import ProjectTemplateClient from "./ProjectTemplateClient";
 
 export default async function ProjectWrapper({
