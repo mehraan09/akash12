@@ -8,10 +8,9 @@ interface Inputs {
 }
 
 export default function TechButton({ to, techName, Icon , className }: Inputs) {
-  const defaultClass =
-  "flex flex-col items-center text-black dark:text-cyan-100 text-md gap-2";
+  const defaultClass = "flex flex-col items-center text-black dark:text-cyan-100 text-md gap-2";
   return (
-      <a href={to} className={className ?? defaultClass}>
+      <a href={to} className={className ? className :  defaultClass}>
         <Icon className="w-5 h-5" />
         <span className="">{techName}</span>
       </a>    

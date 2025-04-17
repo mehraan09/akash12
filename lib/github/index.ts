@@ -6,6 +6,13 @@ export interface Issue {
     createdAt: string;
     url : string
 }
+
+type GitHubIssue = {
+  title: string;
+  state: 'open' | 'closed';
+  created_at: string;
+  html_url: string;
+};
   
 export async function getIssues(repo: string): Promise<Issue[] | null> {
     const token = process.env.GIT_TOKEN;
@@ -24,7 +31,8 @@ export async function getIssues(repo: string): Promise<Issue[] | null> {
     if (!response || !Array.isArray(response.data)) return null;
 
 // for JS only no types by github
-    const returnData: Issue[] = response.data.map((d: any) => ({
+   
+const returnData: Issue[] = (response.data as GitHubIssue[]).map((d) => ({
       title: d.title,
       state: d.state,
       createdAt: String(new Date (d.created_at).toLocaleDateString()),
