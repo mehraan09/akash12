@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { DiVisualstudio } from "react-icons/di";
 import { SiUbuntu, SiGithub } from "react-icons/si";
-import { SkillsTemp } from "./SkillsTemp";
+import SkillsTemp from "./SkillsTemp";
 import TechButton from "./TechButton";
 
 const tools: ReactNode[] = [

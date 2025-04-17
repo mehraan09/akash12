@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { SiMongodb, SiMysql, SiPostgresql, SiPrisma } from "react-icons/si";
-import { SkillsTemp } from "./SkillsTemp";
+import  SkillsTemp  from "./SkillsTemp";
 import TechButton from "./TechButton";
 
 const dbs: ReactNode[] = [

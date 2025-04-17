@@ -1,7 +1,7 @@
 // DevToolsSection.tsx
 import { ReactNode } from "react";
 import { SiReact, SiNodedotjs, SiExpress, SiNextdotjs, SiTailwindcss } from "react-icons/si";
-import { SkillsTemp } from "./SkillsTemp";
+import  SkillsTemp  from "./SkillsTemp";
 import TechButton from "./TechButton";
 
 const devTools: ReactNode[] = [

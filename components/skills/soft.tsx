@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { GiBrain, GiTeamIdea } from "react-icons/gi";
 import { FaComments, FaLightbulb, FaBookOpen } from "react-icons/fa";
-import { SkillsTemp } from "./SkillsTemp";
+import  SkillsTemp  from "./SkillsTemp";
 import TechButton from "./TechButton";
 
 const softSkills: ReactNode[] = [

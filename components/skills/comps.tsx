@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { SiDatabricks, SiLinux, SiGnubash } from "react-icons/si";
 import { FaDatabase } from "react-icons/fa";
 import { GiBrain } from "react-icons/gi";
-import { SkillsTemp } from "./SkillsTemp";
+import  SkillsTemp  from "./SkillsTemp";
 import TechButton from "./TechButton";
 
 const fundamentals: ReactNode[] = [

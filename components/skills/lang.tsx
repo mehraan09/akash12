@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { DiCss3, DiHtml5, DiJavascript1, DiSqllite, DiVisualstudio } from "react-icons/di";
-import { SkillsTemp } from "./SkillsTemp";
+import SkillsTemp  from "./SkillsTemp";
 import TechButton from "./TechButton";
 
 const langs: ReactNode[] = [
