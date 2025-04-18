@@ -1,7 +1,8 @@
 // DevOpsSection.tsx
 import { ReactNode } from "react";
 import { DiAws, DiDocker, DiRedis, DiDatabase, DiWebplatform } from "react-icons/di";
-import SkillsTemp  from "./SkillsTemp";
+import SkillsTemp from "./skillsTemplate";
+
 import TechButton from "./TechButton";
 
 const devops: ReactNode[] = [

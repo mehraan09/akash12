@@ -2,7 +2,8 @@ import { ReactNode } from "react";
 import { SiDatabricks, SiLinux, SiGnubash } from "react-icons/si";
 import { FaDatabase } from "react-icons/fa";
 import { GiBrain } from "react-icons/gi";
-import  SkillsTemp  from "./SkillsTemp";
+import SkillsTemp from "./skillsTemplate";
+
 import TechButton from "./TechButton";
 
 const fundamentals: ReactNode[] = [
@@ -13,6 +14,6 @@ const fundamentals: ReactNode[] = [
   <TechButton key="shell" to="#" techName="Shell Scripting" Icon={SiGnubash} />,
 ];
 
-export default function FundamentalsSection() {
-  return <SkillsTemp naav="📚 CS Fundamentals" skills={fundamentals} />;
+export default function F() {
+  return <SkillsTemp naav="📚 CS Fundamentals" skills={fundamentals} ></SkillsTemp>;
 }

@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { DiCss3, DiHtml5, DiJavascript1, DiSqllite, DiVisualstudio } from "react-icons/di";
-import SkillsTemp  from "./SkillsTemp";
+import SkillsTemp from "./skillsTemplate";
+
 import TechButton from "./TechButton";
 
 const langs: ReactNode[] = [
@@ -16,5 +17,5 @@ const langs: ReactNode[] = [
 ];
 
 export default function LangsSection() {
-  return <SkillsTemp naav="🖥️ Programming Languages" skills={langs} />;
+  return <SkillsTemp naav="🖥️ Programming Languages" skills={langs} ></SkillsTemp>;
 }
