@@ -8,7 +8,7 @@ import Me from "@/components/mySelf";
 
 export const metadata: Metadata = {
   title: {
-    template: "Akash %s",
+    template: "%s Akash",
     default: "Akash Ahmad Malik - Portfolio",
   },
   description: "Hi There! Let's build cool things together. You in? 👾",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Akash Ahmad Malik's Portfolio",
     description:
-      "Check out Akash Ahmad Malik's portfolio for software projects and tech skills.",
+      "Akash Ahmad Malik's portfolio for software projects and tech skills.",
     creator: "@Aakash41339611",
     images: ["akash.jpeg"],
   },
