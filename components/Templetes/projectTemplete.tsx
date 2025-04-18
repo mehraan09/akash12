@@ -1,5 +1,5 @@
 import { getIssues } from "@/lib/github";
-import { ReactNode ,Suspense } from "react";
+import { ReactNode } from "react";
 import ProjectTemplateClient from "./ProjectTemplateClient";
 
 export default async function ProjectWrapper({
@@ -18,9 +18,9 @@ export default async function ProjectWrapper({
   reponame: string;
 }){
   const issues = await getIssues(reponame);
+  
 
   return (
-    <Suspense fallback={<p>loading .... </p>}>
     <ProjectTemplateClient
       pname={pname}
       date={date}
@@ -29,6 +29,5 @@ export default async function ProjectWrapper({
       links={links}
       issues={issues}
     />
-    </Suspense>
   );
 }

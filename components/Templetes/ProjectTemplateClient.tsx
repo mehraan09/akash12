@@ -1,5 +1,5 @@
 "use client";
-import { ReactNode, useState  } from "react";
+import { ReactNode, useState } from "react";
 import Link from "next/link";
 import { Issue } from "@/lib/github";
 import { IoIosArrowDown } from "react-icons/io";
@@ -23,25 +23,28 @@ export default function ProjectTemplateClient({
   links,
   techs,
   issues,
-}: t) {
+} : t) {
   const [a, setA] = useState<"hidden" | "flex">("hidden");
 
   const toggleMenu = () => {
-
     setA((prev) => (prev === "hidden" ? "flex" : "hidden"));
   };
 
   return (
-    <div className="w-[94.8vw] md:w-[28rem] md:border border-black rounded-lg md:m-4 dark:border-white md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
-      <div className="h-full flex flex-col justify-between p-8 relative z-10">
+    <div className=" w-[94.8vw] md:w-[28rem] md:border border-black rounded-lg md:m-4 dark:border-white md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
+      <div className="h-screen flex flex-col justify-between p-8 relative z-10">
         <div>
           <p className="md:text-lg font-macondo font-bold dark:text-cyan-100 hover:text-red-700 dark:hover:text-red-400">
             {pname}
           </p>
-          <div className="font-iansui italic dark:text-cyan-100 mt-1">{date}</div>
-        </div>
+          <div className="font-iansui italic dark:text-cyan-100 mt-1">
+            {date}
+          </div>
+      </div>
 
-        <div className="font-iansui italic dark:text-cyan-100 flex-wrap mt-4">{desc}</div>
+        <div className="flex shrink font-iansui italic dark:text-cyan-100  mt-4">
+          {desc}
+        </div>
 
         <div className="flex gap-3 flex-wrap md:text-base text-xs mt-6">
           {techs}
@@ -65,34 +68,36 @@ export default function ProjectTemplateClient({
             </p>
           </button>
 
-  {(!issues || issues.length === 0 ) ? (
-  <p className={`${a} text-gray-600 font-iansui`}>
-    No issues found in the current GitHub repo. Kindly check other repos.
-  </p>
-) : (
-  issues.slice(0,3).map((i: Issue, j: number) => (
-    <div key={j} >
-      <a href={i.url} className={`${a}`}>
-      <p className="text-md font-iansui text-gray-800 mb-2 ">
-        {j + 1}. {i.title}
-      </p>
-      <div className="flex gap-4">
-        <h5
-          className={`text-sm font-medium ${
-            i.state === "open" ? "text-green-600" : "text-red-600"
-          }`}
-        >
-          {i.state.toUpperCase()}
-        </h5>
-        <h6 className="text-xs text-gray-500">
-          Created: {i.createdAt}
-        </h6>
-      </div>
-      </a>
-    </div>
-  ))
-)}
-
+          {!issues || issues.length === 0 ? (
+            <p className={`${a} text-gray-600 font-iansui`}>
+              No issues found in the current GitHub repo. Kindly check other
+              repos.
+            </p>
+          ) : (
+            issues
+              .slice(0, issues.length < 2 ? issues.length : 2)
+              .map((i: Issue, j: number) => (
+                <div key={j}>
+                  <a href={i.url} className={`${a}`}>
+                    <p className="text-md font-iansui text-gray-800 mb-2 ">
+                      {j + 1}. {i.title}
+                    </p>
+                    <div className="flex gap-4">
+                      <h5
+                        className={`text-sm font-medium ${
+                          i.state === "open" ? "text-green-600" : "text-red-600"
+                        }`}
+                      >
+                        {i.state.toUpperCase()}
+                      </h5>
+                      <h6 className="text-xs text-gray-500">
+                        Created: {i.createdAt}
+                      </h6>
+                    </div>
+                  </a>
+                </div>
+              ))
+          )}
         </div>
       </div>
     </div>

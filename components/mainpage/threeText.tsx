@@ -16,9 +16,9 @@ interface t {
 export default function ThreeTexts({ t1, t2, t3, t4, links, techs }: t) {
   return (
     <div className="w-[94.8vw] md:w-[28rem]  md:border border-black rounded-lg md:m-4 dark:border-white md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
-      <div className="h-full flex flex-col justify-between p-8 relative z-10">
+      <div className="h-full flex flex-col justify-between p-8 relative z-10 text-wrap">
         <div>
-          <p className="md:text-lg font-macondo font-bold dark:text-cyan-100 hover:text-red-700 dark:hover:text-red-400">
+          <p className="flex md:text-lg font-macondo font-bold dark:text-cyan-100 hover:text-red-700 dark:hover:text-red-400">
             {t1}
           </p>
           <div className="font-iansui italic dark:text-cyan-100 mt-1">
@@ -26,11 +26,11 @@ export default function ThreeTexts({ t1, t2, t3, t4, links, techs }: t) {
           </div>
         </div>
 
-        <div className="font-iansui italic dark:text-cyan-100 flex-wrap mt-4">
+        <div className="flex-wrap shrink font-iansui italic dark:text-cyan-100  mt-4">
           {t3}
         </div>
 
-        <div className="font-iansui text-right text-md dark:text-cyan-100 mt-4">
+        <div className="font-iansui shrink text-right text-md dark:text-cyan-100 mt-4">
           {t4}
         </div>
 
