@@ -13,7 +13,7 @@ export const metadata : Metadata = {
 
 export default function A() {
 
-return <div className="h-screen flex w-max">
+return <div className="h-screen flex w-max ">
     <Langs></Langs>
     <Devs></Devs>
     <Devops/>

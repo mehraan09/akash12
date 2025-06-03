@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import Layout from "@/components/layyy";
 import PlanetOrbit from "@/components/mainpage/bg";
 import "./globals.css";
 import NavBar from "@/components/navs";
 import { Arrow } from "@/components/navs";
 import Me from "@/components/mySelf";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -57,6 +57,8 @@ export const viewport: Viewport = {
   width: "device-width",
   height: "device-height",
   initialScale: 1,
+  viewportFit: "cover",
+  maximumScale : 1
 };
 
 export default function RootLayout({
@@ -66,27 +68,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script src="/hScroll.js" strategy="afterInteractive" />
+      </head>
       <body
-        className={`h-screen antialiased font-thin overflow-x-auto small-scrollbar bg-[#e6f9ff] dark:bg-[#1a1f23]  z-[40]`}
+        className={`h-[100dvh] antialiased font-thin new-scrollbar overflow-x-auto bg-[#ebfffe] z-[40]`}
       >   
-        <div className="fixed inset-0 z-0">
-          <PlanetOrbit></PlanetOrbit>
-        </div>
-        <div className="fixed md:top-[1.7vh] md:left-[1vw] md:h-[96.6vh] h-screen md:w-[6rem] w-[5vw] md:border rounded-lg dark:border-white border-black bg-[#e6f9ff] dark:bg-[#1a1f23] z-[100]">
-          <Me />
-        </div>
-        <Layout>
-          <div className="ml-[6vw] md:ml-[7rem] h-screen flex z-40 ">
+        <div className="fixed inset-0 z-0"><PlanetOrbit></PlanetOrbit></div>
+
+        <div className=" fixed md:top-[1.7vh] md:left-[1vw] md:h-[96.6vh] h-screen md:w-[6rem] w-[5vw] md:border rounded-lg dark:border-white border-black  bg-[#ebfffe] z-[100]">
+          <Me/></div>
+
+          <div className="ml-[6vw] md:ml-[7.8rem] h-screen flex z-40 ">
             <NavBar />
             <div className={`flex-grow z-20`}>{children}</div>
             <div className="md:flex hidden z-30">
-              <Arrow />
-            </div>
+              <Arrow /></div>
             <div className="fixed right-12 top-12 md:hidden z-30">
-              <Arrow />
-            </div>
+              <Arrow /></div>
           </div>
-        </Layout>
       </body>
     </html>
   );

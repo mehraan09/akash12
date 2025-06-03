@@ -7,7 +7,7 @@ interface SkillsProps {
 
 export default function SkillsTemp({ skills, naav }: SkillsProps) {
   return (
-    <div className="w-[94.8vw] md:w-[28rem] md:border md:m-4 rounded-2xl border-black dark:border-white transition-colors duration-300">
+    <div className="small-scrollbar overflow-y-auto w-[94.8vw] md:w-[28rem] md:border md:m-4 rounded-lg border-black dark:border-white transition-colors duration-300">
       <div className="h-full flex flex-col pt-10 md:pt-16 p-6 md:p-8">
       <p className="text-lg font-iansui font-bold text-black dark:text-white">
           {naav}

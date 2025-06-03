@@ -1,6 +1,7 @@
 import TechList from "@/components/projectCompos/drift";
 import TechList2 from "@/components/projectCompos/medium";
 import CollegeDBMSTechList from "@/components/projectCompos/college";
+import CreatorDashboardTechList from "@/components/projectCompos/vai";
 import { Metadata } from "next"
 import React from "react";
 import ProjectWrapper from "@/components/Templetes/projectTemplete";
@@ -10,6 +11,7 @@ export const metadata: Metadata = { title: "Projects" };
 export default function A(){
   return (
     <div className="h-screen flex w-max">
+
       <section id="drift" className="flex">
           <ProjectWrapper
             pname="DriftPro - Paytm for Desktop"
@@ -21,6 +23,22 @@ export default function A(){
           />
       </section>
 
+
+      <section id="vAI" className="flex">
+          <ProjectWrapper
+            pname="Creator Dashboard"
+            date="Mar 2025 - April 2025"
+            desc={data4}
+            techs={CreatorDashboardTechList()}
+            links={[
+              { l1: "https://github.com/Akasho09/vAI", l2: "⚙️ Github" } ,
+              { l1: "https://vertxxai.vercel.app/", l2: "☁️ Deployment" },
+            ]}
+            reponame="vAI"
+          />
+      </section>
+
+      
       <section id="mediun" className="flex">
           <ProjectWrapper
             pname="MediumPro - Blogging Web App"
@@ -86,6 +104,19 @@ const data3 = (
       <li>Implemented a monorepo architecture with Turborepo for better scalability and performance.</li>
       <li>Stored transaction data securely using PostgreSQL with Prisma ORM.</li>
       <li>Designed an intuitive user interface with Tailwind CSS.</li>
+    </ul>
+  </div>
+);
+
+const data4 = (
+  <div className="flex flex-grow">
+    <ul className="list-disc list-inside space-y-2">
+      <li>Built Creator Dashboard, a Medium Pro-like web app for content creators to manage profiles and interact with content feeds.</li>
+      <li>Implemented JWT-based authentication with role-based access (User/Admin).</li>
+      <li>Designed a smart credit system rewarding user interactions like likes, saves, reports, and profile completion.</li>
+      <li>Tracked credit balances and activity logs with real-time UI components.</li>
+      <li>Integrated feed aggregation from Reddit and Twitter APIs, with moderation features for admins.</li>
+      <li>Built with React.js, Tailwind CSS, Node.js, Express, and MongoDB; Dockerized for efficient deployment.</li>
     </ul>
   </div>
 );

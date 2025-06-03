@@ -1,6 +1,6 @@
 import Image from "next/image"
 export default function TwoImages(){
-    return  <div className="w-[94.8vw] md:w-[28rem] col-span-1 md:m-4 rounded-xl md:border border-black text-white dark:hidden">
+    return  <div className="overflow-y-auto small-scrollbar w-[94.8vw] md:w-[28rem] col-span-1 m-2 md:m-4 rounded-lg md:border border-black text-white dark:hidden">
      <div className="h-full flex flex-col items-center justify-around mx-8 relative z-10">
      <div className="md:hidden flex justify-center">    
       </div>

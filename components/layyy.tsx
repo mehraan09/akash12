@@ -9,9 +9,10 @@ export default function Layout({ children }: LayoutProps) {
   useEffect(() => {
     const handleWheel = (event: WheelEvent) => {
       event.preventDefault();
-      const scrollAmount = (event.deltaY || event.deltaX) * 0.75;
+      const scrollAmount = (event.deltaY + event.deltaX);
       window.scrollBy({
-          left: scrollAmount,
+          left: scrollAmount*.75,
+          top : 0,
       });
     };
     window.addEventListener("wheel", handleWheel  , { passive : false });
@@ -19,5 +20,5 @@ export default function Layout({ children }: LayoutProps) {
       window.removeEventListener("wheel", handleWheel);
     };
   }, []);
-  return <div >{children}</div>;
+  return <div className="flex h-[100vh]">{children}</div>;
 }

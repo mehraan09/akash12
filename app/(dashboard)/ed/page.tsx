@@ -11,19 +11,20 @@ export default function A() {
       <ThreeTexts t1="B-Tech Computer Engineering" t2="Jamia Millia Islamia , New Delhi 110025." 
       t3={college}
       t4=" Aug 2022 - May 2026." 
-      links={[{l1:"https://drive.google.com/file/d/1VHfcJLD8fiaKNbQDGNS7KNHqO31dwKGE/view?usp=drive_link"  ,  l2:"💾 Drive"}]}></ThreeTexts>
+      links={[{l1:"https://drive.google.com/file/d/1h3ullG78akroHkwB87WhUYoojygfj19h/view?usp=sharing"  ,  l2:"💾 Drive"}]}>
+      </ThreeTexts>
 
       <ThreeTexts t1="JEE Mains and JEE Advanced" t2="Petronet Kashmir Super 30 , Srinagar Kashmir." 
       t3={data}
       t4={"Sept 2021 - Aug 2022."} 
       links={[{l1:"https://drive.google.com/drive/u/0/folders/1VBKGDT7q4WWNCuIjlHhReuCcu8uG2KJ5" , l2:"💾 Drive"}]}
-></ThreeTexts>
+      ></ThreeTexts>
 
       <ThreeTexts t1="PCMB 12th Boards" t2="Govt Higher Secondary School , Dangiwacha Rafiabad Baramulla Kashmir." 
       t3={school}
       t4="Sept 2019 - Sept 2021."
       links={[{l1:"https://drive.google.com/file/d/1t3xIZu66qB-XvXVahJB-8ZZWbjffF9jp/view?usp=drive_link" , l2:"💾 Drive"}]}
-></ThreeTexts>
+      ></ThreeTexts>
       
   </div>
 }
@@ -117,7 +118,7 @@ const data = (
   </div>
 );
 
-const SPIs = [7.14 ,7.12 , 6.91 , 7.54 , 8.23]
+const SPIs = [7.14 ,7.12 , 6.91 , 7.54 , 8.26]
 let totalSpi=0;
 let divison =0;
 SPIs.forEach((s,i)=>(
@@ -145,7 +146,7 @@ const college = (
       </div>
     ))}
     <div className="flex justify-between px-4 py-3 bg-slate-100 font-semibold text-slate-900 border-t border-slate-300 dark:border-white rounded-b-md">
-      <span className="">Total SPI</span>
+      <span className="">Total CGPA</span>
       <span className="">{(totalSpi/divison).toFixed(2)}</span>
     </div>
   </div>

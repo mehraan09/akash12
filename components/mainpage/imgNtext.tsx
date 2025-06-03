@@ -11,7 +11,7 @@ interface InfoCardProps {
 
 export default function InfoCard({ img, txt, txt2, txt3, txt4 , txt5 }: InfoCardProps) {
   return (
-    <div className="w-[94.8vw] md:w-[28rem]  md:border border-black rounded-lg md:m-4 dark:border-white md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
+    <div className="overflow-y-auto small-scrollbar w-[94.8vw] md:w-[28rem]  md:border border-black rounded-lg md:m-4 dark:border-white md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
       <div className="h-full flex flex-col justify-between py-16 px-6 relative z-10 text-wrap">
 
       <p className="flex md:text-lg font-macondo font-bold dark:text-cyan-100 hover:text-red-700 dark:hover:text-red-400 border-b-2 border-blue-300 pb-1 w-fit">
@@ -31,7 +31,6 @@ export default function InfoCard({ img, txt, txt2, txt3, txt4 , txt5 }: InfoCard
           <p className="shrink text-gray-900 text-sm font-iansui">{txt2}</p>
 
         </div>
-
         <div>
         <p className="text-gray-900  leading-relaxed font-iansui">{txt3}</p>
         </div>

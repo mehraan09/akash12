@@ -18,7 +18,7 @@ export default function NavBar() {
   const pathname = usePathname()
 
   return (
-    <div className="md:m-4 relative md:w-[22vw] rounded-2xl md:border border-black dark:border-white z-50 transition-colors duration-300">
+    <div className="md:m-4 max-h-[100dvh] w-[94.8vw] md:w-[24rem] rounded-lg md:border border-black dark:border-white z-50 transition-colors duration-300">
       <div className="md:ml-2 mt-4 w-0 md:w-[22vw] gap-2 md:gap-0 md:p-3 text-sm z-0">
         <div className="hidden md:flex flex-col">
           {navs.map((n, i) => (
@@ -48,8 +48,10 @@ export default function NavBar() {
     </div>
   )
 }
+
+
 export function Arrow () {
 const pathname = usePathname()
 const index = navs.findIndex((n) => n.route === pathname);
-  return <RightArrow linkk={ navs[(index+1)%navs.length].route || "/"}></RightArrow>
+  return <RightArrow linkk={ navs[(index+1)%navs.length].route || "/"}>{navs[(index+1)%navs.length].nav}</RightArrow>
 }
