@@ -31,8 +31,8 @@ export default function ProjectTemplateClient({
   };
 
   return (
-    <div className=" w-[94.8vw] md:w-[28rem] md:border border-black rounded-lg md:m-4 dark:border-white md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
-      <div className="h-screen flex flex-col justify-between p-8 relative z-10">
+    <div className="overflow-y-auto small-scrollbar w-[94.8vw] md:w-[28rem] md:border border-black rounded-lg md:m-4 dark:border-white md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
+      <div className="h-full flex flex-col justify-between py-8 px-4 md:p-8 relative z-10">
         <div>
           <p className="md:text-lg font-macondo font-bold dark:text-cyan-100 hover:text-red-700 dark:hover:text-red-400">
             {pname}
@@ -75,7 +75,7 @@ export default function ProjectTemplateClient({
             </p>
           ) : (
             issues
-              .slice(0, issues.length < 2 ? issues.length : 2)
+              .slice(0, issues.length < 4 ? issues.length : 4)
               .map((i: Issue, j: number) => (
                 <div key={j}>
                   <a href={i.url} className={`${a}`}>

@@ -22,7 +22,7 @@ txt4="Currently, I am seeking an internship opportunity where I can apply my tec
 </InfoCard>
 
 
-<InfoCard img="/ak3.png" 
+<InfoCard img="/ak2.png" 
 txt="Lets Connect and build something cool Together ! "
 txt3="Eager to share what I know with the team and learn from them.
 I believe in growing together through collaboration and knowledge exchange."

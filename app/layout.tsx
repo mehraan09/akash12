@@ -71,15 +71,14 @@ export default function RootLayout({
       <head>
         <Script src="/hScroll.js" strategy="afterInteractive" />
       </head>
-      <body
-        className={`h-[100dvh] antialiased font-thin new-scrollbar overflow-x-auto bg-[#ebfffe] z-[40]`}
-      >   
+      <body className="bg-[#ebfffe] new-scrollbar">
+        <div className="overflow-auto md:overflow-visible bg-[#ebfffe] z-[40]">
         <div className="fixed inset-0 z-0"><PlanetOrbit></PlanetOrbit></div>
 
-        <div className=" fixed md:top-[1.7vh] md:left-[1vw] md:h-[96.6vh] h-screen md:w-[6rem] w-[5vw] md:border rounded-lg dark:border-white border-black  bg-[#ebfffe] z-[100]">
+        <div className="fixed md:top-[1.7vh] md:left-[1vw] md:h-[96.6dvh] h-[100dvh] md:w-[6rem] w-[3rem] md:border rounded-lg dark:border-white border-black  bg-[#ebfffe] z-[100]">
           <Me/></div>
 
-          <div className="ml-[6vw] md:ml-[7.8rem] h-screen flex z-40 ">
+          <div className="ml-[4rem] md:ml-[7.8rem] h-[100dvh] flex z-40 ">
             <NavBar />
             <div className={`flex-grow z-20`}>{children}</div>
             <div className="md:flex hidden z-30">
@@ -87,6 +86,8 @@ export default function RootLayout({
             <div className="fixed right-12 top-12 md:hidden z-30">
               <Arrow /></div>
           </div>
+        </div>
+        
       </body>
     </html>
   );

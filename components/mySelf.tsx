@@ -9,7 +9,7 @@ export default function Me() {
             AKASH AHMAD MALIK
           </p>
         </Link>
-      <SocialLinks></SocialLinks>
+       <SocialLinks></SocialLinks>
     </div>
   );
 }
