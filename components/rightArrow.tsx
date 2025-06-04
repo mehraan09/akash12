@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 export default function RightArrow({
@@ -9,7 +10,7 @@ export default function RightArrow({
 }) {
   return (
     <div className="h-[5rem] w-[5rem] md:w-[28rem] md:h-full rotate-90 md:rotate-0 flex flex-col justify-center items-center">
-      <a href={linkk} className="relative w-20 h-20 group animate-bounce-x">
+      <Link href={linkk} className="relative w-20 h-20 group animate-bounce-x">
         {/* SVG for circular text */}
         <svg
           viewBox="0 0 100 100"
@@ -41,7 +42,7 @@ export default function RightArrow({
         >
           <FaLongArrowAltRight size={24} className="text-gray-900 dark:text-gray-900 hover:scale-120" />
         </div>
-      </a>
+      </Link>
     </div>
   );
 }
