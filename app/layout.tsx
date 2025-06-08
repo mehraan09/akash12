@@ -75,10 +75,10 @@ export default function RootLayout({
         <div className="overflow-auto md:overflow-visible bg-[#ebfffe] z-[40]">
         <div className="fixed inset-0 z-0"><PlanetOrbit></PlanetOrbit></div>
 
-        <div className="fixed md:top-[1.7vh] md:left-[1vw] md:h-[96.6dvh] h-[100dvh] md:w-[6rem] w-[3rem] md:border rounded-lg dark:border-white border-black  bg-[#ebfffe] z-[100]">
+        <div className="fixed top-[1.7vh] md:left-4 h-[96.6dvh] md:w-[6rem] w-[2.5rem] md:border rounded-lg dark:border-white border-black  bg-[#ebfffe] z-[100]">
           <Me/></div>
 
-          <div className="ml-[4rem] md:ml-[7.8rem] h-[100dvh] flex z-40 ">
+          <div className="ml-[3rem] md:ml-[7.8rem] h-[100dvh] flex z-40 ">
             <NavBar />
             <div className={`flex-grow z-20`}>{children}</div>
             <div className="md:flex hidden z-30">
