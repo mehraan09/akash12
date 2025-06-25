@@ -118,12 +118,17 @@ const data = (
   </div>
 );
 
-const SPIs = [7.14 ,7.12 , 6.91 , 7.54 , 8.26]
+const SPIs = [7.14, 7.12, 6.91, 7.54, 8.26, 7.61];
+// const Credits = [23, 22, 22, 22, 22, 20];
+// const multiplier  = [.25 , .25 , .5 , .5 , .75 , .75 ]
+const factor = [ 5.75 , 5.5 , 11 , 11 , 16.5 , 15 ]
+
 let totalSpi=0;
 let divison =0;
+
 SPIs.forEach((s,i)=>(
-  totalSpi+=((i+2)/2*s),
-  divison+=(i+2)/2
+  totalSpi+=((s)*factor[i]),
+  divison+=factor[i]
 ))
 
 const college = (

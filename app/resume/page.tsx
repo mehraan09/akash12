@@ -1,4 +1,4 @@
-import ResumePage from "@/components/RESUME/i";
+import ResumePage from "@/components/RESUME/index";
 import Layout from "@/components/layyy";
 
 export default function A() {
