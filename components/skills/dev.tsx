@@ -14,5 +14,5 @@ const devTools: ReactNode[] = [
 ];
 
 export default function DevToolsSection() {
-  return <SkillsTemp naav="⚡ Development & Frameworks" skills={devTools} idd="devs" />;
+  return <SkillsTemp naav="⚡ Development & Frameworks" skills={devTools} />;
 }

@@ -17,5 +17,5 @@ const langs: ReactNode[] = [
 ];
 
 export default function LangsSection() {
-  return <SkillsTemp naav="🖥️ Programming Languages" skills={langs} idd="langs" ></SkillsTemp>;
+  return <SkillsTemp naav="🖥️ Programming Languages" skills={langs}></SkillsTemp>;
 }

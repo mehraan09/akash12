@@ -12,5 +12,5 @@ const dbs: ReactNode[] = [
 ];
 
 export default function DatabasesSection() {
-  return <SkillsTemp naav="💾 Databases" skills={dbs} idd="dbs" />;
+  return <SkillsTemp naav="💾 Databases" skills={dbs} />;
 }

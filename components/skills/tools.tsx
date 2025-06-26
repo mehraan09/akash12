@@ -11,5 +11,5 @@ const tools: ReactNode[] = [
 ];
 
 export default function ToolsSection() {
-  return <SkillsTemp naav="🧰 Tools & Platforms" skills={tools} idd="tools" />;
+  return <SkillsTemp naav="🧰 Tools & Platforms" skills={tools} />;
 }

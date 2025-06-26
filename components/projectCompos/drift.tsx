@@ -6,7 +6,6 @@ import {
   SiExpress,
   SiPrisma,
   SiTailwindcss,
-  SiZod,
   SiDocker,
 } from "react-icons/si"; // Note: `SiZod` doesn't exist, using SiZod = "Z" icon substitute (see below)
 
