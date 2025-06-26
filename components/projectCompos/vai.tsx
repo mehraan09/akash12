@@ -1,29 +1,71 @@
-import { SiReact, SiNodedotjs, SiExpress, SiMongodb, SiDocker } from "react-icons/si";
+import {
+  SiReact,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiDocker,
+  SiTailwindcss,
+  SiVercel,
+  SiRender,
+  SiPrisma,
+  SiJsonwebtokens,
+  SiReddit,
+} from "react-icons/si";
 import TechButton from "../skills/TechButton";
 
 const creatorDashboardTechs = [
   {
-    to: "/skills#react",
+    to: "/skills#langs",
     techName: "React",
     Icon: SiReact,
   },
   {
-    to: "/skills#nodejs",
+    to: "/skills#devs",
+    techName: "Tailwind CSS",
+    Icon: SiTailwindcss,
+  },
+  {
+    to: "/skills#devs",
+    techName: "Vercel",
+    Icon: SiVercel,
+  },
+  {
+    to: "/skills#devs",
     techName: "Node.js",
     Icon: SiNodedotjs,
   },
   {
-    to: "/skills#express",
+    to: "/skills#devs",
     techName: "Express",
     Icon: SiExpress,
   },
   {
-    to: "/skills#mongodb",
+    to: "/skills#tools",
+    techName: "JWT",
+    Icon: SiJsonwebtokens,
+  },
+  {
+    to: "/skills#devs",
+    techName: "Render",
+    Icon: SiRender,
+  },
+  {
+    to: "/skills#dbs",
     techName: "MongoDB",
     Icon: SiMongodb,
   },
   {
-    to: "/skills#docker",
+    to: "/skills#dbs",
+    techName: "Prisma ORM",
+    Icon: SiPrisma,
+  },
+  {
+    to: "/skills#dbs",
+    techName: "Reddit API",
+    Icon: SiReddit,
+  },
+  {
+    to: "/skills#devops",
     techName: "Docker",
     Icon: SiDocker,
   },

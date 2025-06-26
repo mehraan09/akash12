@@ -9,10 +9,10 @@ const devTools: ReactNode[] = [
   <TechButton key="react" to="pros#college" techName="React" Icon={SiReact} />,
   <TechButton key="node" to="pros#drift" techName="NodeJS" Icon={SiNodedotjs}  />,
   <TechButton key="express" to="pros#drift" techName="ExpressJS" Icon={SiExpress} />,
-  <TechButton key="next" to="pros#drift" techName="NextJS" Icon={SiNextdotjs} />,
+  <TechButton key="nextjs" to="pros#drift" techName="NextJS" Icon={SiNextdotjs} />,
   <TechButton key="tailwind" to="pros#drift" techName="Tailwind CSS" Icon={SiTailwindcss} />,
 ];
 
 export default function DevToolsSection() {
-  return <SkillsTemp naav="⚡ Development & Frameworks" skills={devTools} />;
+  return <SkillsTemp naav="⚡ Development & Frameworks" skills={devTools} idd="devs" />;
 }

@@ -34,15 +34,15 @@ export default function A() {
 const Mainspercentiles = [
   { 
     subject : "Physics" , 
-    percentile : 95
+    percentile : 95.26
   } , 
   { 
     subject : "Chemistry" , 
-    percentile : 95
+    percentile : 95.55
   } , 
   { 
     subject : "Math" , 
-    percentile : 88
+    percentile : 87.82
   } , 
 ]
 
@@ -82,6 +82,12 @@ const data = (
               <span className="font-bold text-slate-700 dark:text-white ">{p.percentile}</span>
             </div>
           ))}
+            <div
+              className="flex justify-between px-4 py-3 border-b border-slate-400 last:border-b-0 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors duration-150"
+            >
+              <span className="font-semibold text-slate-700 dark:text-white ">Total</span>
+              <span className="font-bold text-slate-700 dark:text-white ">95.11</span>
+            </div>
           <div className="flex justify-between px-4 py-3 bg-slate-100 font-semibold text-slate-900 border-t border-slate-300 dark:border-white rounded-b-md">
             <span className="">AIR RANK </span>
             <span className="">44K</span>

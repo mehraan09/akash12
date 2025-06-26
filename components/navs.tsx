@@ -9,7 +9,7 @@ const navs = [
     { nav: "About Me", route: "/about", color: "bg-blue-300" },
     { nav: "Education", route: "/ed", color: "bg-green-300" },
     { nav: "Projects", route: "/pros", color: "bg-yellow-300" },
-    { nav: "Skills", route: "/skill", color: "bg-purple-300" },
+    { nav: "Skills", route: "/skills", color: "bg-purple-300" },
     { nav: "Experience", route: "/exp", color: "bg-pink-300" },
     { nav: "Extra Curriculars", route: "/curric", color: "bg-orange-300" },
     { nav: "Extras", route: "/extras", color: "bg-teal-300" }
@@ -33,7 +33,7 @@ export default function NavBar() {
 
       {/* Mobile nav */}
       {isOpen && (
-        <div className="md:hidden fixed bottom-20 right-4 border border-black dark:border-white rounded-lg p-4 w-64 shadow-lg z-40">
+        <div className="bg-[#ebfffe] md:hidden fixed bottom-20 right-4 border border-black dark:border-white rounded-lg p-4 w-64 shadow-lg z-40">
           {navs.map((n, i) => {
             const isActive = pathname === n.route;
             return (
@@ -44,7 +44,7 @@ export default function NavBar() {
               >
                 <div className="flex items-center py-2">
                   <div
-                    className={`w-5 h-5 flex items-center justify-center mr-3 font-bold text-xs ${n.color} border border-black dark:border-white`}
+                    className={`w-5 h-5 flex items-center justify-center mr-3 font-bold text-xs ${n.color} border border-black`}
                   >
                     {i + 1}
                   </div>

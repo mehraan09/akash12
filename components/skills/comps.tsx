@@ -17,5 +17,5 @@ const fundamentals: ReactNode[] = [
 ];
 
 export default function F() {
-  return <SkillsTemp naav="📚 CS Fundamentals" skills={fundamentals} />;
+  return <SkillsTemp naav="📚 CS Fundamentals" skills={fundamentals} idd="comps" />;
 }

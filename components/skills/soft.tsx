@@ -14,5 +14,5 @@ const softSkills: ReactNode[] = [
 ];
 
 export default function SoftSkillsSection() {
-  return <SkillsTemp naav="🤝 Soft Skills" skills={softSkills} />;
+  return <SkillsTemp naav="🤝 Soft Skills" skills={softSkills} idd="soft" />;
 }

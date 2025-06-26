@@ -14,5 +14,5 @@ const devops: ReactNode[] = [
 ];
 
 export default function DevOpsSection() {
-  return <SkillsTemp naav="🛠️ DevOps Tools" skills={devops} />;
+  return <SkillsTemp naav="🛠️ DevOps Tools" skills={devops} idd="devops" />;
 }

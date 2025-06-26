@@ -3,17 +3,17 @@ import TechButton from "../skills/TechButton";
 
 const collegeDBMSTechs = [
   {
-    to: "/skills#express",
+    to: "/skills#langs",
     techName: "Express",
     Icon: SiExpress,
   },
   {
-    to: "/skills#mongodb",
+    to: "/skills#dbs",
     techName: "MongoDB",
     Icon: SiMongodb,
   },
   {
-    to: "/skills#react",
+    to: "/skills#langs",
     techName: "React",
     Icon: SiReact,
   },
