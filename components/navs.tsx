@@ -10,6 +10,7 @@ const navs = [
     { nav: "Education", route: "/ed", color: "bg-green-300" },
     { nav: "Projects", route: "/pros", color: "bg-yellow-300" },
     { nav: "Skills", route: "/skills", color: "bg-purple-300" },
+    { nav : "DSA" ,  route: "/dsa" , } ,
     { nav: "Experience", route: "/exp", color: "bg-pink-300" },
     { nav: "Extra Curriculars", route: "/curric", color: "bg-orange-300" },
     { nav: "Extras", route: "/extras", color: "bg-teal-300" }

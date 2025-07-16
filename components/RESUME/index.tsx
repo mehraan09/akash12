@@ -1,8 +1,8 @@
 import React from "react";
-
 export default function ResumePage() {
   return (
-    <div className="p-2 mx-auto font-sans text-gray-800 flex items-center justify-center">
+    <div className="p-8 overflow-y-auto small-scrollbar max-h-[100dvh] w-[94.8vw] md:w-[48rem] md:border border-black rounded-lg md:m-4 dark:border-white md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
+     <div className="h-[95dvh] flex flex-col justify-between p-2 py-8 md:p-8 relative z-10 text-wrap ">
       <h1 className="text-3xl font-bold mb-2">Akash Ahmad Malik</h1>
       <p className="text-lg font-semibold">Full Stack Software Engineer</p>
       <p>Maulana Mohammad Ali Jauhar Marg, Jamia Nagar, New Delhi -110025</p>
@@ -77,6 +77,7 @@ export default function ResumePage() {
           <li>Foundation for Excellence (FFE) Scholar, Class of 2022</li>
         </ul>
       </section>
+      </div>
     </div>
   );
 }

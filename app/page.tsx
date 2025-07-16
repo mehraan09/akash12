@@ -15,7 +15,8 @@ const Home = () => {
     }]
   };
 
-  return ( <div className="h-screen flex w-max">
+  return ( 
+  <div className="h-screen flex w-max">
         <ThreeTexts
               t1={content.greeting}
               t2={content.title}
