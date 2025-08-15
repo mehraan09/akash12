@@ -30,7 +30,7 @@ export default function ThreeTexts({ t1, t2, t3, t4, links, techs }: t) {
           {t3}
         </div>
 
-        <div className="font-iansui  text-right text-md dark:text-cyan-100 mt-4">
+        <div className="font-iansui text-right text-md dark:text-cyan-100 mt-4 ">
           {t4}
         </div>
 

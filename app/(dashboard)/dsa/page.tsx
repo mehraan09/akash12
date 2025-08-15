@@ -3,6 +3,9 @@
 import { useEffect, useState } from 'react';
 import ThreeTexts from '@/components/mainpage/threeText';
 
+import LeetCodeStats from "@/components/LeetCodeStats";
+
+
 type LeetCodeProfile = {
   username: string;
   profile: {
@@ -51,6 +54,19 @@ export default function Page() {
             ? ` \n Problems Solved: ${totalSolved} (E: ${easySolved}, M: ${mediumSolved}, H: ${hardSolved})`
             : ''
         }
+        t4={<div>
+        <LeetCodeStats 
+        solved={totalSolved}
+        total={3647}
+        easySolved={easySolved}
+        easyTotal={890}
+        mediumSolved={mediumSolved}
+        mediumTotal={1897}
+        hardSolved={hardSolved}
+        hardTotal={860}
+        attempting={13}>
+        </LeetCodeStats></div>
+          }
       />
 
       <ThreeTexts t1="Competitive Programming:" t2="Codeforces, GFG, etc." />
