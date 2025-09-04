@@ -15,7 +15,7 @@ return <div className="h-screen flex w-max">
 const data = <div>
   <ol className="">
     <li className="p-4">1. Cricket Team Member (Runner-Up) - Inter-Departmental Cricket Tournament.</li>
-    <li className="p-4">2. Completed 300+ DSA Questions across platforms.</li>
+    <li className="p-4">2. Completed 500+ DSA Questions across platforms.</li>
     <li className="p-4">3. Foundation for Excellence (FFE) Scholar, Class of 2022.</li>
   </ol>
 </div>

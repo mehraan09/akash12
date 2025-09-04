@@ -10,7 +10,7 @@ const Home = () => {
       and contribute to impactful projects.`,
     connect: "Always eager to learn, build, and solve real-world problems. Let’s connect and build something amazing! 🌱💻🏏",
     links: [{
-      l1: "https://drive.google.com/file/d/1B1OfckBsAtYvYeNkUHrfrkrdACIhxiS6/view?usp=sharing",
+      l1: "https://drive.google.com/file/d/1jbqbBw7SNcp2OHFLnt6L7UNwTHVMnWZk/view?usp=sharing",
       l2: "📄 Resume"
     }]
   };

@@ -6,12 +6,13 @@ import {
   SiPrisma,
   SiTailwindcss,
   SiZenn, // Used as a placeholder for Zod
+  SiGithub, // For GitHub CI/CD
 } from "react-icons/si";
 
 import { FaKey } from "react-icons/fa"; // For JWT representation
 import TechButton from "../skills/TechButton";
 
-// Hono doesn't have a dedicated icon in react-icons – we can use a fallback
+// Hono doesn't have a dedicated icon in react-icons – fallback
 import { MdOutlineHttp } from "react-icons/md"; // Fallback for Hono
 
 const techs = [
@@ -28,7 +29,7 @@ const techs = [
   {
     to: "/skills#tools",
     techName: "Debouncing",
-    Icon: MdOutlineHttp, // Fallback (can be tooltip-only if no icon)
+    Icon: MdOutlineHttp, // Fallback (tooltip-only if no icon)
   },
   {
     to: "/skills#dbs",
@@ -64,6 +65,11 @@ const techs = [
     to: "/skills#tools",
     techName: "JWT Auth",
     Icon: FaKey, // Key icon to represent secure auth
+  },
+  {
+    to: "/skills#tools",
+    techName: "GitHub CI/CD Workflows",
+    Icon: SiGithub, // GitHub logo to represent workflows
   },
 ];
 

@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { SiDatabricks, SiLinux, SiGnubash } from "react-icons/si";
 import { FaDatabase, FaMicrochip } from "react-icons/fa";
-import { GiBrain } from "react-icons/gi";
+import { GiBrain, GiMagnifyingGlass } from "react-icons/gi";
 import { MdOutlineDeveloperBoard } from "react-icons/md";
 import SkillsTemp from "./skillsTemplate";
 import TechButton from "./TechButton";
@@ -14,6 +14,7 @@ const fundamentals: ReactNode[] = [
   <TechButton key="shell" to="#" techName="Shell Scripting" Icon={SiGnubash} />,
   <TechButton key="compiler" to="#" techName="Compiler Design" Icon={MdOutlineDeveloperBoard} />,
   <TechButton key="embedded" to="#" techName="Embedded Systems" Icon={FaMicrochip} />,
+  <TechButton key="datamining" to="#" techName="Data Mining" Icon={GiMagnifyingGlass} />,
 ];
 
 export default function F() {
