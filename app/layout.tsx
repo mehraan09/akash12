@@ -6,6 +6,7 @@ import { Arrow } from "@/components/navs";
 import Me from "@/components/mySelf";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: {
@@ -81,7 +82,7 @@ export default function RootLayout({
           <div className="ml-[3rem] md:ml-[7.8rem] h-[100dvh] flex z-40 ">
             <NavBar />
             <div className={`flex-grow z-20`}>{children}
-            <Analytics/>
+            <Analytics/> <SpeedInsights/>
             </div>
             <div className="md:flex hidden z-30">
               <Arrow /></div>
