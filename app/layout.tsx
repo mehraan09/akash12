@@ -73,6 +73,7 @@ export default function RootLayout({
       <head>
         <Script src="/hScroll.js" strategy="afterInteractive" />
       </head>
+      <meta name="google-site-verification" content="uhUSq3S9zTC8jQ-rP1KM_Ne-ZPVdXiya5FtSIS2RCkk" />
       <body className="bg-[#ebfffe] new-scrollbar">
         <div className="overflow-auto md:overflow-visible bg-[#ebfffe] z-[40]">
         <div className="fixed inset-0 z-0"><PlanetOrbit></PlanetOrbit></div>
