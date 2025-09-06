@@ -1,20 +1,25 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { getRepos } from "@/lib/github/git";
-import { GoStar, GoRepoForked, GoBook } from "react-icons/go"; // ✅ react-icons
+import { GoStar, GoRepoForked, GoBook } from "react-icons/go";
+import { Endpoints } from "@octokit/types";
+
+type ReposForUserResponse = Endpoints["GET /users/{username}/repos"]["response"]["data"];
+type Repo = ReposForUserResponse[0];
+
 
 interface GitHubReposProps {
   username: string;
 }
 
 const GitHubRepos: React.FC<GitHubReposProps> = ({ username }) => {
-  const [repos, setRepos] = useState<any[]>([]);
+  const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchRepos = async () => {
       try {
-        const data = await getRepos();
+        const data : Repo[] = await getRepos();
         setRepos(data);
       } catch (error) {
         console.error("Error fetching repos:", error);
@@ -86,7 +91,7 @@ const GitHubRepos: React.FC<GitHubReposProps> = ({ username }) => {
                 {repo.forks_count}
               </span>
               <span>
-                Updated {new Date(repo.updated_at).toLocaleDateString()}
+                Updated {new Date(repo.updated_at || "").toLocaleDateString()}
               </span>
             </div>
           </div>
