@@ -73,6 +73,18 @@ export default function RootLayout({
       <head>
         <Script src="/hScroll.js" strategy="afterInteractive" />
       </head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-LYJ3E16RSB"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LYJ3E16RSB');
+          `}
+        </Script>
       <meta name="google-site-verification" content="uhUSq3S9zTC8jQ-rP1KM_Ne-ZPVdXiya5FtSIS2RCkk" />
       <body className="bg-[#ebfffe] new-scrollbar">
         <div className="overflow-auto md:overflow-visible bg-[#ebfffe] z-[40]">
