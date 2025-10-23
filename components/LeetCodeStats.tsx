@@ -75,7 +75,7 @@ const LeetCodeStatsCombined = ({
       </div>
 
       {/* --- Rectangular Progress Bar --- */}
-      <div className="relative w-full h-2 rounded-full bg-gray-200 overflow-hidden">
+      <div className="relative w-full h-2 rounded-full  overflow-hidden">
         {solvedSegments.map(({ level, solved: catSolved, color }) => {
           const segmentWidth = safeDivide(catSolved, total);
           const startOffset = currentCumulativeWidth;
@@ -117,9 +117,9 @@ const LeetCodeStatsCombined = ({
                 ></span>
                 {level}
               </span>
-              <span className="text-gray-700 font-medium">
+              <span className=" font-medium">
                 {solved}
-                <span className="text-gray-400 text-xs font-normal ml-1">
+                <span className="text-xs font-normal ml-1">
                   ({percent}%)
                 </span>
               </span>
@@ -140,7 +140,7 @@ const LeetCodeStatsCombined = ({
             )`,
           }}
         ></div>
-        <div className="absolute inset-[6px] bg-[#f9fafb] rounded-full flex flex-col justify-center items-center shadow-md">
+        <div className="absolute inset-[6px] rounded-full flex flex-col justify-center items-center shadow-md">
           <span className="text-lg font-bold">
             {solved}
             <span className="text-sm text-gray-500">/{total}</span>

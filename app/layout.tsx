@@ -10,6 +10,8 @@ import { Kode_Mono , JetBrains_Mono } from "next/font/google";
 import ColorPaletteMenu from "@/components/colorPallete";
 export const kodeMono = Kode_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-kodemono", display: "swap", });
 export const jetB = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-kodemono", display: "swap", });
+import SplashCursor from '@/components/Animations/cursor'
+
 
 export const metadata: Metadata = {
   title: {
@@ -72,7 +74,7 @@ export default function RootLayout({
     <div className="fixed inset-0 z-10">
       <PlanetOrbit />
     </div>
-
+   <SplashCursor />
     <Me />
 
     <div className="ml-[3rem] md:ml-[5rem] flex flex-col md:flex-row relative z-30">

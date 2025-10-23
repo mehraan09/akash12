@@ -94,7 +94,7 @@ body, .theme * {
     animation-timing-function: ease-in;
   }
   50% {
-    top: calc(100dvh - 643px);
+    top: 244px;
     animation-timing-function: ease-out;
   }
 }
@@ -103,3 +103,6 @@ body, .theme * {
   position: absolute;
   animation: bounce-ball 3s infinite;
 }
+
+
+

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IconType } from "react-icons";
 
 interface TechButtonProps {
@@ -16,7 +17,7 @@ export default function TechButton({
   desc,
 }: TechButtonProps) {
   return (
-    <a
+    <Link
       href={to}
       className={`group relative flex items-center gap-2 ${className}`}
     >
@@ -28,6 +29,6 @@ export default function TechButton({
           {desc}
         </span>
       )}
-    </a>
+    </Link>
   );
 }

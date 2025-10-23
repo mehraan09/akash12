@@ -1,9 +1,11 @@
 import { ReactNode } from "react";
 import Link from "next/link";
+import FallingText from "../Animations/fallingText";
+import ScrambledText from "../Animations/scrambleText";
 
 interface t {
   t1: string;
-  t2?: ReactNode;
+  t2?: string;
   t3?: ReactNode;
   t4?: ReactNode;
   techs?: string[];
@@ -18,12 +20,28 @@ export default function ThreeTexts({ t1, t2, t3, t4, links = [], techs = [] }: t
     <div className="w-[92dvw] md:w-[20rem] ">
     <div className="overflow-y-auto small-scrollbar text-xs tracking-wide relative transition-colors duration-300 ">
       <article className="h-[92dvh] mt-[3dvh] mb-[3dvh] flex flex-col  justify-between z-10 m-3">
-        <header>
-          <h2 className="text-sm md:text-md font-bold !text-red-700 ">
-            {t1}
-          </h2>
-          {t2 && <p className="italic mt-1">{t2}</p>}
+        
+        <header className="h-1/8">
+        <FallingText
+            text={t1}
+            trigger="hover"
+            backgroundColor="transparent"
+            wireframes={false}
+            gravity={0.56}
+            fontSize=".75rem"
+            mouseConstraintStiffness={0.9}
+        />            
+          <ScrambledText
+            className="scrambled-text-demo mt-0"
+            radius={50}
+            duration={1.2}
+            speed={0.5}
+            scrambleChars=".:"
+          >
+            {t2}
+          </ScrambledText>
         </header>
+
 
         {t3 && <section className="italic mt-4 scroll-container">{t3}</section>}
 
