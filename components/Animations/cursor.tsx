@@ -137,13 +137,13 @@ export default function SplashCursor({
 
       gl.clearColor(0, 0, 0, 1);
 
-      const halfFloatTexType = isWebGL2
-        ? (gl as WebGL2RenderingContext).HALF_FLOAT
-        : (halfFloat && (halfFloat as any).HALF_FLOAT_OES) || 0;
+        const halfFloatTexType: GLenum = isWebGL2
+          ? (gl as WebGL2RenderingContext).HALF_FLOAT
+          : (halfFloat && (halfFloat as OES_texture_half_float).HALF_FLOAT_OES) || 0;
 
-      let formatRGBA: any;
-      let formatRG: any;
-      let formatR: any;
+        let formatRGBA: { internalFormat: GLenum; format: GLenum } | null;
+        let formatRG: { internalFormat: GLenum; format: GLenum } | null;
+        let formatR: { internalFormat: GLenum; format: GLenum } | null;
 
       if (isWebGL2) {
         formatRGBA = getSupportedFormat(gl, (gl as WebGL2RenderingContext).RGBA16F, gl.RGBA, halfFloatTexType);
@@ -792,9 +792,10 @@ export default function SplashCursor({
       const dyeRes = getResolution(config.DYE_RESOLUTION!);
 
       const texType = ext.halfFloatTexType;
-      const rgba = ext.formatRGBA;
-      const rg = ext.formatRG;
-      const r = ext.formatR;
+      // Provide safe fallbacks in case the detected formats are null
+      const rgba = ext.formatRGBA || { internalFormat: gl.RGBA, format: gl.RGBA };
+      const rg = ext.formatRG || { internalFormat: gl.RGBA, format: gl.RGBA };
+      const r = ext.formatR || { internalFormat: gl.RGBA, format: gl.RGBA };
       const filtering = ext.supportLinearFiltering ? gl.LINEAR : gl.NEAREST;
       gl.disable(gl.BLEND);
 
