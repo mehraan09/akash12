@@ -53,6 +53,8 @@ export default function RootLayout({
           name="google-site-verification"
           content="uhUSq3S9zTC8jQ-rP1KM_Ne-ZPVdXiya5FtSIS2RCkk"
         />
+        <meta name="google-adsense-account" content="ca-pub-6934180729383134"/>
+        
         <Script src="/hScroll.js" strategy="afterInteractive" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-LYJ3E16RSB"
