@@ -26,7 +26,7 @@ export default function SkillsPage() {
     <div className="h-screen flex overflow-y-auto">
       {skillSections.map((section, i) => (
         <div className="border-r" key={i}>
-        <div className="w-[95vw] md:w-[20rem] my-[3dvh]">
+        <div className="w-[92vw] md:w-[20rem] my-[3dvh]">
           <h2 className="text-sm font-semibold m-4 !text-red-700 font-jetB">- {section.title}</h2>
           <div className="flex flex-col gap-2 m-4">
             {section.skills.map((skill , i) => {

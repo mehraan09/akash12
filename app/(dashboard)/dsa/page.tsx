@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import ThreeTexts from '@/components/mainpage/threeText';
 import LeetCodeStats from "@/components/LeetCodeStats";
-// import GitHubPortfolio from '@/components/git';
 
 type LeetCodeProfile = {
   username: string;
@@ -40,7 +39,8 @@ export default function Page() {
 
   return (
     <div className="h-screen flex overflow-y-auto">
-    <div className="h-screen border-r w-[95vw] md:w-[20rem]">
+      
+    <div className="h-screen border-r w-[92vw] md:w-[20rem]">
       <ThreeTexts
         t1="LeetCode Profile:"
         t2={
@@ -68,7 +68,7 @@ export default function Page() {
           }
       />
     </div>
-    <div className="h-screen border-r w-[95vw] md:w-[20rem]">
+    <div className="h-screen border-r w-[92vw] md:w-[20rem]">
 
       <ThreeTexts t1="CodeForces , GFGs etc :" t2="" />
     </div>

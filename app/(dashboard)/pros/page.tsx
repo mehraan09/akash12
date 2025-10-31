@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <div className="h-screen flex overflow-y-auto">
 
-    <div className="h-screen border-r w-[95vw] md:w-[20rem]">
+    <div className="h-screen border-r w-[92vw] md:w-[20rem]">
         <ProjectServer
           pname="DriftPro - Paytm for Desktop"
           desc={p2data}
@@ -20,7 +20,7 @@ export default function Projects() {
           reponame="DriftPro"
     />
     </div>
-        <div className="h-screen border-r w-[95vw] md:w-[20rem]">
+        <div className="h-screen border-r w-[92vw] md:w-[20rem]">
       <ProjectServer
         pname="Apple Scab Estimation Using CNN"
         desc={p5data}
@@ -35,7 +35,7 @@ export default function Projects() {
       />
     </div>
 
-    <div className="h-screen border-r w-[95vw] md:w-[20rem]">
+    <div className="h-screen border-r w-[92vw] md:w-[20rem]">
         <ProjectServer
           pname="MediumPro - Blogging Web App"
           desc={p1data}
@@ -51,7 +51,7 @@ export default function Projects() {
       </div>
 
       {/* Creator Dashboard */}
-    <div className="h-screen border-r w-[95vw] md:w-[20rem]">
+    <div className="h-screen border-r w-[92vw] md:w-[20rem]">
         <ProjectServer
           pname="Creator Dashboard"
           desc={p3data}
@@ -67,7 +67,7 @@ export default function Projects() {
     </div>
 
       {/* College DBMS */}
-    <div className="h-screen border-r w-[95vw] md:w-[20rem]">
+    <div className="h-screen border-r w-[92vw] md:w-[20rem]">
         <ProjectServer
           pname="College-Based Database Management System"
           desc={p4data}

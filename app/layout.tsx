@@ -77,7 +77,7 @@ export default function RootLayout({
    <SplashCursor />
     <Me />
 
-    <div className="ml-[3rem] md:ml-[5rem] flex flex-col md:flex-row relative z-30">
+    <div className="ml-[2rem] md:ml-[5rem] flex flex-col md:flex-row relative z-30">
       <aside className="md:border-r shrink-0 w-0 h-0 md:h-screen md:w-40 lg:w-60 ">
         <NavBar />
       </aside>

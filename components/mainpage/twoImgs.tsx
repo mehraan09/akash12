@@ -14,7 +14,7 @@ export default function TwoImages() {
           style={{ filter: "var(--img-filter)" }}
         />
 
-        <div className="border-y w-full p-0">
+        <div className="border-y w-full h-1/3 p-0">
         <BouncingBalls ballCount={20} gravity={1} ballRadius={6}/>
         </div>
 

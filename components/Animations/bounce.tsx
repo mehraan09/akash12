@@ -84,11 +84,10 @@ const BouncingBalls: React.FC<{
 
   return (
     <div
-      className="p-0"
+      className="p-0 h-full"
       ref={containerRef}
       style={{
         width: "100%",
-        height: "100%",
         position: "relative",
         overflow: "hidden",
         background: "transparent", // ✅ transparent container

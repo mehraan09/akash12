@@ -14,7 +14,7 @@ interface InfoCardProps {
 
 export default function InfoCard({ img, txt, txt2, txt3, txt4 , txt5 }: InfoCardProps) {
   return (
-    <div className="h-screen overflow-y-auto overflow-x-auto small-scrollbar w-[95vw] md:w-[20rem] md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
+    <div className="h-screen overflow-y-auto overflow-x-auto small-scrollbar w-[92vw] md:w-[20rem] md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
     <div className="h-full flex flex-col justify-between py-16 px-2 relative z-10 text-wrap">
     <div className="h-1/6">
         <FallingText

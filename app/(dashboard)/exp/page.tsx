@@ -4,8 +4,6 @@ import Link from "next/link";
 export default function WhyHireMe() {
   return (
     <div className="h-screen flex overflow-y-auto">
-
-
     <div className="md:w-[20rem] border-r ">
         <ThreeTexts
           t1="No Formal Experience Yet"
