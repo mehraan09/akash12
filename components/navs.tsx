@@ -7,6 +7,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 
 const navs = [
     { nav: "Home", route: "/", color: "bg-red-300" },
+    { nav : "Blogs" , route : "/blogs" , color:"bg-blue-300"},
     { nav: "About Me", route: "/about", color: "bg-blue-300" },
     { nav: "Education", route: "/ed", color: "bg-green-300" },
     { nav: "Projects", route: "/pros", color: "bg-yellow-300" },

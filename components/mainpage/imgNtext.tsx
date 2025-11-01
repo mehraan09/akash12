@@ -1,7 +1,6 @@
 import Image from "next/image";
 import FallingText from "../Animations/fallingText";
 import ScrambledText from "../Animations/scrambleText";
-  
 
 interface InfoCardProps {
   img?: string;
@@ -9,60 +8,60 @@ interface InfoCardProps {
   txt2?: string;
   txt3?: string;
   txt4?: string;
-  txt5? : string
+  txt5?: string;
 }
 
-export default function InfoCard({ img, txt, txt2, txt3, txt4 , txt5 }: InfoCardProps) {
+export default function InfoCard({ img, txt, txt2, txt3, txt4, txt5 }: InfoCardProps) {
   return (
-    <div className="h-screen overflow-y-auto overflow-x-auto small-scrollbar w-[92vw] md:w-[20rem] md:text-sm/6 text-sm tracking-wide relative transition-colors duration-300">
-    <div className="h-full flex flex-col justify-between py-16 px-2 relative z-10 text-wrap">
-    <div className="h-1/6">
+    <div className="h-full overflow-y-auto small-scrollbar w-[92vw] md:w-[20rem] flex flex-col justify-between text-sm tracking-wide  ">
+
         <FallingText
-            text={txt}
-            trigger="hover"
-            backgroundColor="transparent"
-            wireframes={false}
-            gravity={0.56}
-            mouseConstraintStiffness={0.9}
-          />  
-    </div>
+          text={txt}
+          trigger="hover"
+          backgroundColor="transparent"
+          wireframes={false}
+          gravity={0.56}
+          mouseConstraintStiffness={0.9}
+        />
 
-        <div className="flex justify-center items-center">
-         { img && <Image
-            src={img}
-            width={200}
-            height={200}
-            alt="Profile Image"
-            quality={100}
-            className="rounded-full object-cover !transition-transform duration-500 hover:scale-110"
-          />
-         }
-          <p className="shrink text-xs">{txt2}</p>
-
-        </div>
-
-          <ScrambledText
-            className="scrambled-text-demo mt-0"
-            radius={50}
-            duration={1.2}
-            speed={0.5}
-            scrambleChars=".:"
-          >
-            {txt3 || ""}
-          </ScrambledText>    
-
-
-        <div className="">
-          {txt4 && (
-            <p className="leading-relaxed text-xs ">{txt4}</p>
-          )}
-        </div>
-
-
-        <div>
-        <p className=" leading-relaxed text-xs ">{txt5}</p>
-        </div> 
+      <div className="flex flex-col items-center gap-3 mt-6">
+        {img && (
+          <div className="relative group">
+            <Image
+              src={img}
+              width={180}
+              height={180}
+              alt={txt}
+              quality={100}
+              className="rounded-full object-cover ring-2 ring-gray-300 dark:ring-gray-600 transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 rounded-full bg-black/10 dark:bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
-        </div>
+        )}
+        {txt2 && (
+          <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 italic">{txt2}</p>
+        )}
+      </div>
+
+      {txt3 && (
+        <ScrambledText
+          className="scrambled-text-demo text-center text-gray-800 dark:text-gray-100 mb-4"
+          radius={60}
+          duration={1.2}
+          speed={0.5}
+          scrambleChars=".:"
+        >
+          {txt3}
+        </ScrambledText>
+      )}
+
+      <div className="space-y-3 text-gray-700 dark:text-gray-300 leading-relaxed">
+        {txt4 && <p className="text-xs md:text-sm">{txt4}</p>}
+        {txt5 && <p className="text-xs md:text-sm">{txt5}</p>}
+      </div>
+
+      <div className="w-2/3 h-[1px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent mt-6" />
+    </div>
   );
 }
+
