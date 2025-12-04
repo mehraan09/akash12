@@ -226,7 +226,7 @@ const blogs = [
 
 export default function BlogsPage() {
   return (
-    <div className="min-h-screen flex flex-col md:flex-row overflow-x-auto md:overflow-visible bg-gray-50">
+    <div className="min-h-screen flex flex-col md:flex-row overflow-x-auto md:overflow-visible ">
       {blogs.map((blog, idx) => (
         <div
           key={idx}

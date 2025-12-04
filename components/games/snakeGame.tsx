@@ -1,16 +1,24 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { FaArrowUp, FaArrowDown, FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import {
+  FaArrowUp,
+  FaArrowDown,
+  FaArrowLeft,
+  FaArrowRight,
+} from "react-icons/fa6";
+
 export default function SnakeGame() {
+  const BOX = 20;
+  const CANVAS = 400;
+  const TICK = 120;
+
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const ctxRef = useRef<CanvasRenderingContext2D | null>(null); // ✅ cache context
+
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [running, setRunning] = useState(false);
-
-  const BOX = 20;
-  const CANVAS = 400;
-  const TICK = 120;
 
   const snakeRef = useRef<{ x: number; y: number }[]>([{ x: 200, y: 200 }]);
   const directionRef = useRef<"UP" | "DOWN" | "LEFT" | "RIGHT">("RIGHT");
@@ -29,19 +37,22 @@ export default function SnakeGame() {
   const bonusTimeRef = useRef<number>(0);
   const [bonusTimeState, setBonusTimeState] = useState(0);
 
+  // ✅ Cache the 2D context once on mount
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    ctxRef.current = canvas.getContext("2d");
+  }, []);
+
   useEffect(() => {
     const saved = localStorage.getItem("highScore");
-    if (saved) {
-      setHighScore(parseInt(saved, 10));
-    }
+    if (saved) setHighScore(parseInt(saved, 10));
   }, []);
 
   useEffect(() => {
     if (!running) return;
 
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = ctxRef.current;
     if (!ctx) return;
 
     const onKey = (e: KeyboardEvent) => {
@@ -51,6 +62,7 @@ export default function SnakeGame() {
       if (e.key === "ArrowLeft" && d !== "RIGHT") directionRef.current = "LEFT";
       if (e.key === "ArrowRight" && d !== "LEFT") directionRef.current = "RIGHT";
     };
+
     document.addEventListener("keydown", onKey);
 
     loopRef.current = window.setInterval(() => {
@@ -91,11 +103,9 @@ export default function SnakeGame() {
 
   function spawnBonusFood() {
     clearBonusTimers();
-
     isBonusRef.current = true;
     foodSizeRef.current = BOX * 3;
     foodRef.current = randomFood(foodSizeRef.current);
-
     bonusTimeRef.current = 5;
     setBonusTimeState(5);
 
@@ -145,10 +155,9 @@ export default function SnakeGame() {
       ctx.fillStyle = "gold";
       ctx.fillRect(f.x, f.y, fsize, fsize);
 
-      const t = bonusTimeRef.current; // read ref directly
+      const t = bonusTimeRef.current;
       if (t > 0) {
-        ctx.shadowBlur = 0;
-        ctx.fillStyle = "black";
+        ctx.fillStyle = "red";
         const fontSize = Math.max(12, Math.floor(fsize * 0.45));
         ctx.font = `bold ${fontSize}px monospace`;
         ctx.textAlign = "center";
@@ -156,7 +165,7 @@ export default function SnakeGame() {
         ctx.fillText(String(t), f.x + fsize / 2, f.y + fsize / 2);
       }
     } else {
-      ctx.fillStyle = "red";
+      ctx.fillStyle = "green";
       ctx.fillRect(f.x, f.y, fsize, fsize);
     }
 
@@ -229,7 +238,7 @@ export default function SnakeGame() {
 
     for (let i = 0; i < snakeRef.current.length; i++) {
       const seg = snakeRef.current[i];
-      ctx.fillStyle = i === 0 ? "#111" : "#444";
+      ctx.fillStyle = i === 0 ? "#f80505ff" : "#f2050594";
       ctx.fillRect(seg.x, seg.y, BOX, BOX);
     }
   }
@@ -247,12 +256,16 @@ export default function SnakeGame() {
   }, [bonusTimeState]);
 
   return (
-
     <main className="flex flex-col items-center justify-center min-h-screen w-[92dvw] md:w-[20rem] text-sm p-2">
       <h1 className="text-lg font-semibold mb-3">Snake Game</h1>
 
-      <div className="relative aspect-square w-full max-w-[400px] border flex items-center justify-cente ">
-        <canvas ref={canvasRef} width={CANVAS} height={CANVAS} className="w-full h-full" />
+      <div className="relative aspect-square w-full max-w-[400px] border flex items-center justify-center">
+        <canvas
+          ref={canvasRef}
+          width={CANVAS}
+          height={CANVAS}
+          className="w-full h-full"
+        />
       </div>
 
       <div className="flex gap-6 text-sm mt-3">
@@ -273,18 +286,30 @@ export default function SnakeGame() {
 
       {running && (
         <div className="flex flex-col items-center gap-2 mt-4">
-          <button onClick={() => handleDirection("UP")} className="p-2 border rounded">
+          <button
+            onClick={() => handleDirection("UP")}
+            className="p-2 border rounded"
+          >
             <FaArrowUp size={14} />
           </button>
           <div className="flex gap-4">
-            <button onClick={() => handleDirection("LEFT")} className="p-2 border rounded">
+            <button
+              onClick={() => handleDirection("LEFT")}
+              className="p-2 border rounded"
+            >
               <FaArrowLeft size={14} />
             </button>
-            <button onClick={() => handleDirection("RIGHT")} className="p-2 border rounded">
+            <button
+              onClick={() => handleDirection("RIGHT")}
+              className="p-2 border rounded"
+            >
               <FaArrowRight size={14} />
             </button>
           </div>
-          <button onClick={() => handleDirection("DOWN")} className="p-2 border rounded">
+          <button
+            onClick={() => handleDirection("DOWN")}
+            className="p-2 border rounded"
+          >
             <FaArrowDown size={14} />
           </button>
         </div>
