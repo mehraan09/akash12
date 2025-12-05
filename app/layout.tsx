@@ -8,8 +8,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Kode_Mono , JetBrains_Mono } from "next/font/google";
 import ColorPaletteMenu from "@/components/colorPallete";
- const kodeMono = Kode_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-kodemono", display: "swap", });
- const jetB = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-kodemono", display: "swap", });
+export const kodeMono = Kode_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-kodemono", display: "swap", });
+export const jetB = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-kodemono", display: "swap", });
 
 
 export const metadata: Metadata = {
