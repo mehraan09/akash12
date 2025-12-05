@@ -8,8 +8,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Kode_Mono , JetBrains_Mono } from "next/font/google";
 import ColorPaletteMenu from "@/components/colorPallete";
-export const kodeMono = Kode_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-kodemono", display: "swap", });
-export const jetB = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-kodemono", display: "swap", });
+ const kodeMono = Kode_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-kodemono", display: "swap", });
+ const jetB = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-kodemono", display: "swap", });
 
 
 export const metadata: Metadata = {
@@ -67,10 +67,18 @@ export default function RootLayout({
             gtag('config', 'G-LYJ3E16RSB');
           `}
         </Script>
+
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6934180729383134"
+          crossOrigin="anonymous"
+        />
+
       </head>
 <body className="new-scrollbar transition-colors "
         style={{ backgroundColor: "var(--bg-color)" , borderColor : "var(--border-color)", color : "var(--text-color)"}}
 >
+  
   <div className="relative min-h-screen overflow-auto md:overflow-visible z-20 theme">
     <div className="fixed inset-0 z-10">
       <PlanetOrbit />

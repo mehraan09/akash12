@@ -1,5 +1,6 @@
 import Twoo from "@/components/mainpage/twoImgs";
 import TeenTexts from "@/components/mainpage/threeText";
+import AdUnit from "@/components/AdUnit";
 
 const Home = () => {
   const content = {
@@ -17,16 +18,19 @@ const Home = () => {
 
   return (
   <div className="h-screen flex overflow-y-auto ">
-  <div className="h-screen border-r w-[92vw] md:w-[20rem]">
-    <TeenTexts
-              t1={content.greeting}
-              t2={content.title}
-              t3={content.connect}
-              t4={content.description}
-              links={content.links} />
-    </div>
+          <div className="h-screen border-r w-[92vw] md:w-[20rem]">
+            <TeenTexts
+                      t1={content.greeting}
+                      t2={content.title}
+                      t3={content.connect}
+                      t4={content.description}
+                      links={content.links} />
+            </div>
           <div className="h-screen flex border-r w-[92vw] md:w-[20rem]">
             <Twoo/> 
+          </div>
+          <div className="h-screen flex border-r w-[92vw] md:w-[20rem]">
+            <AdUnit/> 
           </div>
   </div>
   )}
