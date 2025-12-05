@@ -66,14 +66,12 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-LYJ3E16RSB');
           `}
-        </Script>
-
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6934180729383134"
-          crossOrigin="anonymous"
-        />
-
+          </Script>
+          <Script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6934180729383134"
+            crossOrigin="anonymous"
+          />
       </head>
 <body className="new-scrollbar transition-colors "
         style={{ backgroundColor: "var(--bg-color)" , borderColor : "var(--border-color)", color : "var(--text-color)"}}
