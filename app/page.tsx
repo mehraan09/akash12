@@ -36,9 +36,10 @@ const Home = () => {
       </div>
 
       {/* FIXED AD CONTAINER */}
-      <div className="flex border-r w-full py-4">
-        <AdUnit />
-      </div>
+    <div className="border-r flex-1 min-w-[300px] py-4">
+      <AdUnit />
+    </div>
+
     </div>
   );
 };

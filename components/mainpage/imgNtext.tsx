@@ -1,6 +1,14 @@
+"use client"
 import Image from "next/image";
+import { useEffect } from "react";
 import FallingText from "../Animations/fallingText";
 import ScrambledText from "../Animations/scrambleText";
+
+declare global {
+  interface Window {
+    adsbygoogle?: unknown[];
+  }
+}
 
 interface InfoCardProps {
   img?: string;
@@ -12,17 +20,29 @@ interface InfoCardProps {
 }
 
 export default function InfoCard({ img, txt, txt2, txt3, txt4, txt5 }: InfoCardProps) {
-  return (
-    <div className="h-full overflow-y-auto small-scrollbar w-[92vw] md:w-[20rem] flex flex-col justify-between text-sm tracking-wide  ">
 
-        <FallingText
-          text={txt}
-          trigger="hover"
-          backgroundColor="transparent"
-          wireframes={false}
-          gravity={0.56}
-          mouseConstraintStiffness={0.9}
-        />
+  // ✅ LOAD ADSENSE ONLY ON CLIENT
+  useEffect(() => {
+    try {
+      if (typeof window !== "undefined") {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    } catch (err) {
+      console.log("AdSense error:", err);
+    }
+  }, []);
+
+  return (
+    <div className="h-full overflow-y-auto small-scrollbar w-[92vw] md:w-[20rem] flex flex-col justify-between text-sm tracking-wide">
+
+      <FallingText
+        text={txt}
+        trigger="hover"
+        backgroundColor="transparent"
+        wireframes={false}
+        gravity={0.56}
+        mouseConstraintStiffness={0.9}
+      />
 
       <div className="flex flex-col items-center gap-3 mt-6">
         {img && (
@@ -38,9 +58,25 @@ export default function InfoCard({ img, txt, txt2, txt3, txt4, txt5 }: InfoCardP
             <div className="absolute inset-0 rounded-full bg-black/10 dark:bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
         )}
+
         {txt2 && (
-          <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 italic">{txt2}</p>
+          <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 italic">
+            {txt2}
+          </p>
         )}
+      </div>
+
+      {/* ✅ GOOGLE NATIVE IN-FEED AD (SAFE PLACEMENT) */}
+      <div className="my-6 w-full">
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-format="fluid"
+          data-ad-layout-key="-fb+5t+4v-dd+6v"
+          data-ad-client="ca-pub-6934180729383134"
+          data-ad-slot="1288694184"
+        ></ins>
+        akash
       </div>
 
       {txt3 && (
@@ -64,4 +100,3 @@ export default function InfoCard({ img, txt, txt2, txt3, txt4, txt5 }: InfoCardP
     </div>
   );
 }
-
