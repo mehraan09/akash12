@@ -1,3 +1,4 @@
+import AdUnit from "@/components/AdUnit"
 import { Metadata } from "next"
 
 export const metadata : Metadata = {
@@ -16,7 +17,9 @@ return <div className="h-screen flex overflow-y-auto">
   </ol>
   </div>
 </div> 
-
+       <div className="h-screen border-r w-[92vw] md:w-[20rem]">
+          <AdUnit></AdUnit>
+        </div>
 </div> 
 }
 

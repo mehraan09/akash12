@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { p1data , p2data , p3data , p4data , p5data} from "@/components/project/project";
 import ProjectServer from "@/components/project/wrapper";
+import AdUnit from "@/components/AdUnit";
 
 export const metadata: Metadata = { title: "Projects" };
 
@@ -34,6 +35,10 @@ export default function Projects() {
         reponame="sem7"
       />
     </div>
+
+        <div className="h-screen border-r w-[92vw] md:w-[20rem]">
+          <AdUnit></AdUnit>
+        </div>
 
     <div className="h-screen border-r w-[92vw] md:w-[20rem]">
         <ProjectServer

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import ThreeTexts from "@/components/mainpage/threeText";
+import AdUnit from "@/components/AdUnit";
 
 export const metadata: Metadata = {
   title: "Education | Akash Malik",
@@ -97,6 +98,10 @@ export default function EducationPage() {
           ]}
         />
       </div>
+
+        <div className="h-screen border-r w-[92vw] md:w-[20rem]">
+          <AdUnit></AdUnit>
+        </div>
 
       {/* JEE */}
       <div className="h-screen w-[92vw] md:w-[20rem] flex border-r ">

@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import ThreeTexts from '@/components/mainpage/threeText';
 import LeetCodeStats from "@/components/LeetCodeStats";
+import AdUnit from '@/components/AdUnit';
 
 type LeetCodeProfile = {
   username: string;
@@ -72,6 +73,9 @@ export default function Page() {
 
       <ThreeTexts t1="CodeForces , GFGs etc :" t2="" />
     </div>
+       <div className="h-screen border-r w-[92vw] md:w-[20rem]">
+          <AdUnit></AdUnit>
+        </div>
     </div>
   );
 }

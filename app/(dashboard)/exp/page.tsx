@@ -1,3 +1,4 @@
+import AdUnit from "@/components/AdUnit";
 import ThreeTexts from "@/components/mainpage/threeText";
 import Link from "next/link";
 
@@ -30,6 +31,11 @@ export default function WhyHireMe() {
           }
         />
       </div>
+
+       <div className="h-screen border-r w-[92vw] md:w-[20rem]">
+          <AdUnit></AdUnit>
+        </div>
+
 
       {/* GitHub / Projects Summary */}
       <div className=" md:w-[20rem] border-r">

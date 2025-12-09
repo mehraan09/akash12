@@ -4,10 +4,10 @@ import "./globals.css";
 import NavBar, { Arrow } from "@/components/navs";
 import Me from "@/components/mySelf";
 import Script from "next/script";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Kode_Mono , JetBrains_Mono } from "next/font/google";
 import ColorPaletteMenu from "@/components/colorPallete";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 export const kodeMono = Kode_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-kodemono", display: "swap", });
 export const jetB = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-kodemono", display: "swap", });
 
@@ -96,8 +96,8 @@ export default function RootLayout({
 
       <main className="h-screen flex-grow z-20 font-kodeMono">
         {children}
-        <Analytics />
-        <SpeedInsights />
+        <Analytics></Analytics>
+        <SpeedInsights></SpeedInsights>
       </main>
 
       <div className="hidden md:flex items-start z-30">
