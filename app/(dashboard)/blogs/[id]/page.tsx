@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { blogs } from "../blogs";
 import { use } from "react";
-
+import AdUnit2 from "@/components/adUnit2";
 
 export default function BlogPage({params}: {params: Promise<{ id: string }>}) {
     const { id } = use(params);
@@ -53,6 +53,7 @@ export default function BlogPage({params}: {params: Promise<{ id: string }>}) {
           </div>
         </header>
 
+        <AdUnit2></AdUnit2>
         <div className="p-8 md:p-12">
           <div className="text-sm md:text-lg leading-relaxed font-light space-y-6 article-content !font-jetB">
             {blog.content.map((line: string, index: number) => (

@@ -35,7 +35,6 @@ const Home = () => {
         <Twoo />
       </div>
 
-      {/* FIXED AD CONTAINER */}
     <div className="border-r flex-1 min-w-[300px] py-4">
       <AdUnit />
     </div>

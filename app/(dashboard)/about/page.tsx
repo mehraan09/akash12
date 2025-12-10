@@ -36,9 +36,7 @@ export default function A() {
       </div>
 
       <div className="h-screen border-r w-[92vw] md:w-[20rem] flex">
-        <div className="border-r flex-1 min-w-[300px] py-4">
-          <AdUnit />
-        </div>
+           <AdUnit />
       </div>
 
       <div>

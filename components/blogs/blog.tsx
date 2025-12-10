@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import AdUnit3 from "../xsAdd";
 
 interface BlogCardProps {
   id: string;
@@ -26,14 +27,6 @@ export default function BlogCard({
         <div className="mt-8 relative aspect-video overflow-hidden ">
             
       <div className="my-6 w-full">
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block" }}
-          data-ad-format="fluid"
-          data-ad-layout-key="-fb+5t+4v-dd+6v"
-          data-ad-client="ca-pub-6934180729383134"
-          data-ad-slot="1288694184"
-        ></ins>
           <Image 
               className="p-2 absolute inset-0 h-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100" 
               src="/blog.png" 
@@ -56,6 +49,7 @@ export default function BlogCard({
             {description}
           </p>
 
+          <AdUnit3></AdUnit3>
         <Link className="text-right py-2 px-3 font-extrabold text-xs uppercase tracking-widest underline"
                 href={`/blogs/${id}`}
             >

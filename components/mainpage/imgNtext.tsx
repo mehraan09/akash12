@@ -1,9 +1,7 @@
-"use client";
-
 import Image from "next/image";
-import { useEffect } from "react";
 import FallingText from "../Animations/fallingText";
 import ScrambledText from "../Animations/scrambleText";
+import AdUnit2 from "../adUnit2"
 
 declare global {
   interface Window {
@@ -28,26 +26,6 @@ export default function InfoCard({
   txt4,
   txt5,
 }: InfoCardProps) {
-  // ✅ ADSENSE SAFE CLIENT LOAD
-useEffect(() => {
-  if (typeof window === "undefined") return;
-
-  const timeout = setTimeout(() => {
-    try {
-      const ads = document.querySelectorAll("ins.adsbygoogle");
-
-      ads.forEach((ad) => {
-        if (!ad.getAttribute("data-adsbygoogle-status")) {
-          (window.adsbygoogle = window.adsbygoogle || []).push({});
-        }
-      });
-    } catch (e) {
-      console.warn("Adsense push skipped:", e);
-    }
-  }, 800); // ✅ small delay prevents hydration issues
-
-  return () => clearTimeout(timeout);
-}, []);
 
   return (
     <div className="h-screen w-[95vw] md:w-[20rem] overflow-y-auto overflow-x-hidden small-scrollbar text-sm tracking-wide relative transition-colors duration-300">
@@ -72,16 +50,7 @@ useEffect(() => {
               alt={txt}
               quality={100}
               className="object-cover transition-transform duration-500 scale-90 hover:scale-100"
-            /> : <div className="my-6 w-full">
-          <ins
-            className="adsbygoogle"
-            style={{ display: "block" }}
-            data-ad-format="fluid"
-            data-ad-layout-key="-fb+5t+4v-dd+6v"
-            data-ad-client="ca-pub-6934180729383134"
-            data-ad-slot="1288694184"
-          ></ins>
-        </div>
+            /> : <AdUnit2></AdUnit2>
           }
           {txt2 && <p className="text-xs text-gray-600 dark:text-gray-400">{txt2}</p>}
         </div>
