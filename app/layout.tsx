@@ -59,10 +59,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         className="small-scrollbar transition-colors">
         <Script src="/hScroll.js" strategy="afterInteractive" />
         <Script
+          id="adsense-script"
           async
           strategy="afterInteractive"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6934180729383134"
           crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6934180729383134"
         />
         <script
           dangerouslySetInnerHTML={{

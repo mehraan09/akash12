@@ -78,12 +78,10 @@ export default function Projects() {
           reponame="p24"
         />
     </div>
-
-    <div className="h-screen border-r w-[92vw] md:w-[20rem]">
-        <div className="h-full w-full flex items-center justify-center">
-          <AdsenseAd />
+          
+        <div className="h-screen border-r w-[92vw] md:w-[20rem]">
+          <AdsenseAd></AdsenseAd>
         </div>
-    </div>
     </div>
   );
 }
