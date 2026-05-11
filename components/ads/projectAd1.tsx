@@ -4,16 +4,17 @@ import { useEffect } from "react";
 
 declare global {
   interface Window {
-    adsbygoogle: any[];
+    adsbygoogle: { push: (args: object) => void };
   }
 }
 
 export default function AdsenseAd() {
   useEffect(() => {
     try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
+      window.adsbygoogle = window.adsbygoogle || [];
+      window.adsbygoogle.push({});
     } catch (err) {
-      console.log(err);
+      console.error("AdSense error:", err);
     }
   }, []);
 
