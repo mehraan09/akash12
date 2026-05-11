@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { p1data , p2data , p3data , p4data , p5data} from "@/components/project/project";
 import ProjectServer from "@/components/project/wrapper";
+import AdsenseAd from "@/components/ads/projectAd1";
 
 export const metadata: Metadata = { title: "Projects" };
 
@@ -76,6 +77,12 @@ export default function Projects() {
           links={[{ linkName: "⚙️ Github", href: "https://github.com/Akasho09/p24" }]}
           reponame="p24"
         />
+    </div>
+
+    <div className="h-screen border-r w-[92vw] md:w-[20rem]">
+        <div className="h-full w-full flex items-center justify-center">
+          <AdsenseAd />
+        </div>
     </div>
     </div>
   );
