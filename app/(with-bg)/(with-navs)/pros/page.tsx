@@ -80,7 +80,9 @@ export default function Projects() {
     </div>
           
         <div className="h-screen border-r w-[92vw] md:w-[20rem]">
+        <div className="m-4">
           <AdsenseAd></AdsenseAd>
+        </div>
         </div>
     </div>
   );
