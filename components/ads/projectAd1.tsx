@@ -30,8 +30,8 @@ export default function AdsenseAd() {
       className="adsbygoogle"
       style={{
         display: "block",
-        width: "100%",
-        minHeight: "280px",
+        width: "240px",
+        height: "720px",
       }}
       data-ad-client="ca-pub-6934180729383134"
       data-ad-slot="1750568111"
