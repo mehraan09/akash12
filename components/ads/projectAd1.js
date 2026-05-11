@@ -1,21 +1,12 @@
 "use client";
-
 import { useEffect } from "react";
-
-declare global {
-  interface Window {
-    adsbygoogle: unknown[];
-  }
-}
 
 export default function AdUnit() {
   useEffect(() => {
     try {
-      if (typeof window !== "undefined") {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }
-    } catch (err) {
-      console.error(err);
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.log(e);
     }
   }, []);
 
