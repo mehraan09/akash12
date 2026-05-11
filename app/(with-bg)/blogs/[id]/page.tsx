@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { blogs } from "../blogs";
 import { use } from "react";
+import FluidAd from "@/components/ads/fullwidth";
 
 export default function BlogPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
@@ -69,6 +70,12 @@ export default function BlogPage({ params }: { params: Promise<{ id: string }> }
             <p key={index}>{line}</p>
           ))}
         </div>
+
+        { Number(id)>0 && Number(id)%2==0 &&
+        <div className="m-1">
+              <FluidAd />
+        </div>
+        }
 
         {/* ── Footer ── */}
         <footer className="px-8 py-8 border-t mb-16 md:mb-0">
