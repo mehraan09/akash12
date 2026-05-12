@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import FluidAd from "../ads/fullwidth";
 
 interface BlogCardProps {
   id: string;
@@ -19,15 +20,14 @@ export default function BlogCard({ id, title, description, image, author, date }
     ">
       <article className="h-[92dvh] mt-[3dvh] mb-[3dvh] mx-4 flex flex-col justify-between overflow-y-auto small-scrollbar">
 
-        {/* ── Image ── */}
-        <div className="relative w-full aspect-video overflow-hidden">
+        <Link href={`/blogs/${id}`} className="relative w-full aspect-video overflow-hidden">
           <Image
             src={image ?? "/blog.png"}
             alt={title}
             fill
             className="object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-500"
           />
-        </div>
+        </Link>
 
         {/* ── Body ── */}
         <div className="flex flex-col gap-3 flex-grow py-2">
@@ -41,6 +41,10 @@ export default function BlogCard({ id, title, description, image, author, date }
           <p className="line-clamp-4 leading-relaxed opacity-60 text-[11px]">
             {description}
           </p>
+        </div>
+
+        <div className="m-1">
+          <FluidAd />
         </div>
 
         {/* ── Footer ── */}

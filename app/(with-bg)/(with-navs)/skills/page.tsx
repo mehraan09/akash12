@@ -1,3 +1,4 @@
+import FluidAd from "@/components/ads/fullwidth";
 import TechButton from "@/components/techs/TechButton";
 import { techInfoMap } from "@/components/techs/techMap";
 import { LucideIcon, Code } from "lucide-react";
@@ -69,7 +70,7 @@ export default function SkillsPage() {
             opacity-0 group-hover:opacity-100 transition-opacity duration-500
           " />
 
-          <div className="h-full flex flex-col gap-6 mt-[3dvh] mb-[3dvh] mx-5 overflow-y-auto small-scrollbar">
+          <div className="flex flex-col gap-6 mt-[3dvh] mb-[3dvh] mx-5 overflow-y-auto small-scrollbar">
 
             {/* Header */}
             <div className="flex flex-col gap-1.5">
@@ -99,7 +100,7 @@ export default function SkillsPage() {
                 );
               })}
             </div>
-
+            <FluidAd />
           </div>
         </div>
       ))}

@@ -14,6 +14,7 @@
   --ball-bg: #000;
 }
 
+
 html {
   font-size: 90%;
 }
@@ -80,67 +81,146 @@ body, .theme * {
 }
 
 
-/* 🌥️ Dim Theme — soft bluish-gray with warm center */
-:root[data-theme="theme-light"] {
-  --bg-color: radial-gradient(circle at center, rgb(223, 233, 235) 50%, #fefefe 100%);
+:root {
+  --bg-color: #ffffff;
   --text-color: #000000;
   --border-color: #000000;
-  --ball-bg: #8a3cae;
+  --ball-bg: #000;
+
+  --space-star: rgba(255,255,255,0.8);
+  --space-orbit: rgba(8, 8, 8, 0.868);
+
+  --space-sun-core: #fde047;
+  --space-sun-glow: rgba(250,204,21,0.4);
+
+  --space-comet: rgba(255,255,255,0.9);
+
+  --space-ring: rgba(255,255,255,0.45);
+
+  --space-nebula-1: rgba(99,102,241,0.08);
+  --space-nebula-2: rgba(168,85,247,0.08);
+  --space-nebula-3: rgba(59,130,246,0.08);
+
+  --space-planet-1: #ef4444;
+  --space-planet-2: #facc15;
+  --space-planet-3: #22c55e;
+  --space-planet-4: #60a5fa;
+  --space-planet-5: #818cf8;
 }
 
-/* 🌤️ Light Blue — subtle sky glow using closest-side */
-:root[data-theme="theme-blue"] {
-  --bg-color: radial-gradient(closest-side, #F7E396 , #607B8F, #434E78 );
-  --text-color: #0d1b2a;
-  --border-color: #4b6b83;
-  --ball-bg: #2e5a72;
+
+:root[data-theme="theme-light"] {
+  --bg-color:
+    radial-gradient(
+      circle at center,
+      #f8fbff 0%,
+      #dfe9ef 45%,
+      #c7d7e2 100%
+    );
+
+  --text-color: #111827;
+  --border-color: rgba(0,0,0,0.15);
+
+  --space-star: rgba(15,23,42,0.55);
+  --space-orbit: rgba(15,23,42,0.10);
+
+  --space-ring: rgba(15,23,42,0.18);
+
+  --space-sun-core: #ffd54f;
+  --space-sun-glow: rgba(255,213,79,0.28);
+
+  --space-nebula-1: rgba(96,165,250,0.08);
+  --space-nebula-2: rgba(168,85,247,0.06);
+  --space-nebula-3: rgba(244,114,182,0.05);
 }
 
-/* ☀️ Light Green — soft ellipse for organic feel */
-:root[data-theme="theme-green"] {
-  --bg-color: radial-gradient(ellipse at top left, #387958 0%, #05311c 50%, #0c290a 100%);
-  --text-color: #6d9fd5;
-  --border-color: #7aa5c9;
-  --ball-bg: #005f73;
+:root[data-theme="theme-mint"] {
+  --bg-color:
+    radial-gradient(
+      circle at center,
+      #c8d5c2 0%,
+      #8fa88a 35%,
+      #6dce8a 100%
+    );
+
+  --text-color: #f0ede8;
+
+  --border-color: rgba(240, 237, 232, 0.15);
+
+  --ball-bg: #f0ede8;
+
+  --space-star: rgba(240, 237, 232, 0.75);
+
+  --space-orbit: rgba(240, 237, 232, 0.08);
+
+  --space-ring: rgba(200, 213, 194, 0.2);
+
+  --space-sun-core: #e8dfc8;
+
+  --space-sun-glow: rgba(232, 223, 200, 0.28);
+
+  --space-nebula-1: rgba(100, 130, 100, 0.15);
+
+  --space-nebula-2: rgba(80, 110, 85, 0.12);
+
+  --space-nebula-3: rgba(60, 100, 80, 0.09);
 }
 
-/* 🌑 Dark Theme — farthest-corner for deep space effect */
+:root[data-theme="theme-pink"] {
+  --bg-color:
+    radial-gradient(
+      circle at top,
+      #e8c4c4 0%,
+      #c98a8a 40%,
+      #8a5f78 100%
+    );
+
+  --text-color: #fdf5f5;
+
+  --border-color: rgba(253, 245, 245, 0.14);
+
+  --ball-bg: #fdf5f5;
+
+  --space-star: rgba(253, 245, 245, 0.8);
+
+  --space-orbit: rgba(253, 245, 245, 0.08);
+
+  --space-ring: rgba(232, 196, 196, 0.22);
+
+  --space-sun-core: #f5e8e0;
+
+  --space-sun-glow: rgba(245, 232, 224, 0.3);
+
+  --space-nebula-1: rgba(180, 120, 120, 0.15);
+
+  --space-nebula-2: rgba(140, 90, 110, 0.12);
+
+  --space-nebula-3: rgba(160, 110, 130, 0.1);
+}
+
 :root[data-theme="theme-dark"] {
-  --bg-color: radial-gradient(circle at center, #2a2a2e 0%, #121212 60%, #0a0a0a 100%);
+  --bg-color:
+    radial-gradient(
+      circle at center,
+      #2a2a2e 0%,
+      #121212 60%,
+      #050505 100%
+    );
+
   --text-color: #f1efec;
   --border-color: #6f6f6f;
-  --ball-bg: #f1efec;
+
+  --space-star: rgba(255,255,255,0.95);
+  --space-orbit: rgba(255,255,255,0.10);
+
+  --space-ring: rgba(255,255,255,0.24);
+
+  --space-sun-core: #fde047;
+  --space-sun-glow: rgba(250,204,21,0.42);
+
+  --space-nebula-1: rgba(99,102,241,0.15);
+  --space-nebula-2: rgba(168,85,247,0.13);
+  --space-nebula-3: rgba(59,130,246,0.12);
+
   --img-filter: brightness(0) invert(1);
-}
-
-/* 🌸 Pinkish Theme — circle with off-center glow */
-:root[data-theme="theme-pink"] {
-  --bg-color: radial-gradient(circle at 30% 30%, #FF52A0 0%, #c2a6b2 50%, #e7a5c1 100%);
-  --text-color: #381a1a;
-  --border-color: #b26b7b;
-  --ball-bg: #d45a78;
-}
-
-/* 🌌 Space Purple — ellipse for mystical look */
-:root[data-theme="theme-purple"] {
-  --bg-color: radial-gradient(closest-side, #6d6f4a, #85845c, #2c3838);
-  --text-color: #f0e6ff;
-  --border-color: #6b4c99;
-  --ball-bg: #9b7ed6;
-}
-
-/* 🌅 Sunset Orange — closest-side for warm sunburst effect */
-:root[data-theme="theme-orange"] {
-  --bg-color: radial-gradient(closest-side at center, #b6c939 0%, #d8f325 60%, #bdca65 100%);
-  --text-color: #4a2c1b;
-  --border-color: #b76a3f;
-  --ball-bg: #d9733b;
-}
-
-/* 🌿 Mint Green — ellipse at top right for fresh, airy feel */
-:root[data-theme="theme-mint"] {
-  --bg-color: radial-gradient(circle at center, #3F9AAE 0%, #CADCAE  50%, #3F9AAE 100%);
-  --text-color: #021b16;
-  --border-color: #5c8963;
-  --ball-bg: #00fdcb;
 }
