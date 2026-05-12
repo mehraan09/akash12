@@ -4,14 +4,13 @@ import { Palette } from "lucide-react";
 import { themes } from "./themes";
 
 export default function ColorPaletteHamburger() {
-  const [theme, setTheme] = useState<string | null>(null);
+  const [theme, setTheme] = useState<string | null>("theme-dark");
   const [open, setOpen] = useState(false);
 
   // Only sync state with existing attribute
   useEffect(() => {
     const current =
-      document.documentElement.getAttribute("data-theme") ||
-      "theme-dark";
+      document.documentElement.getAttribute("data-theme") || "theme-dark";
     setTheme(current);
   }, []);
 
