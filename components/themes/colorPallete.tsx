@@ -10,9 +10,8 @@ export default function ColorPaletteHamburger() {
   // Only sync state with existing attribute
   useEffect(() => {
     const current =
-      document.documentElement.getAttribute("data-theme") ||
+      document.documentElement.getAttribute("data-dark") ||
       "theme-mint";
-
     setTheme(current);
   }, []);
 
