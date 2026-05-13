@@ -7,14 +7,6 @@
   to { transform: rotate(360deg); }
 }
 
-:root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --border-color: #000000;
-  --ball-bg: #000;
-}
-
-
 html {
   font-size: 90%;
 }
@@ -80,32 +72,40 @@ body, .theme * {
   animation: bounce-ball 2.5s infinite;
 }
 
-
 :root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --border-color: #000000;
-  --ball-bg: #000;
+  --bg-color:
+    radial-gradient(
+      circle at center,
+      #2a2a2e 0%,
+      #121212 60%,
+      #050505 100%
+    );
 
-  --space-star: rgba(255,255,255,0.8);
-  --space-orbit: rgba(8, 8, 8, 0.868);
+  --text-color: #f1efec;
+  --border-color: #6f6f6f;
+  --ball-bg: #f1efec;
+
+  --space-star: rgba(255,255,255,0.95);
+  --space-orbit: rgba(255,255,255,0.10);
 
   --space-sun-core: #fde047;
-  --space-sun-glow: rgba(250,204,21,0.4);
+  --space-sun-glow: rgba(250,204,21,0.42);
 
   --space-comet: rgba(255,255,255,0.9);
 
-  --space-ring: rgba(255,255,255,0.45);
+  --space-ring: rgba(255,255,255,0.24);
 
-  --space-nebula-1: rgba(99,102,241,0.08);
-  --space-nebula-2: rgba(168,85,247,0.08);
-  --space-nebula-3: rgba(59,130,246,0.08);
+  --space-nebula-1: rgba(99,102,241,0.15);
+  --space-nebula-2: rgba(168,85,247,0.13);
+  --space-nebula-3: rgba(59,130,246,0.12);
 
   --space-planet-1: #ef4444;
   --space-planet-2: #facc15;
   --space-planet-3: #22c55e;
   --space-planet-4: #60a5fa;
   --space-planet-5: #818cf8;
+
+  --img-filter: brightness(0) invert(1);
 }
 
 

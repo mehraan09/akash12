@@ -2,7 +2,7 @@ import GuessGamePage from "@/components/games/guessGame";
 import SnakeGame from "@/components/games/snakeGame";
 import ClickSpeedGame from "@/components/games/speed";
 import TypingTest from "@/components/games/typeGame";
-import GamesAd from "@/components/ads/projectAd1";
+import AdsenseAd from "@/components/ads/projectAd1";
 import XXSAd from "@/components/ads/xxs";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -24,14 +24,7 @@ export default function ExtrasPage() {
   {/* Mobile Top Ad */}
   <div
     className="
-      h-[120px]
-      md:hidden
-      w-full
-      border-b
-      bg-background
-      px-2 py-2
-      flex items-center justify-center
-    "
+      h-[120px] md:hidden w-full border-b bg-background px-2 py-2 flex items-center justify-center"
   >
     <XXSAd />
   </div>
@@ -46,7 +39,7 @@ export default function ExtrasPage() {
       px-4
     "
   >
-    <GamesAd />
+    <AdsenseAd />
   </aside>
 
   {/* Main Content */}

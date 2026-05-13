@@ -100,7 +100,9 @@ export default function SkillsPage() {
                 );
               })}
             </div>
+            <div className="mt-12">
             <FluidAd />
+            </div>
           </div>
         </div>
       ))}

@@ -17,6 +17,12 @@ export const achievements = [
     org: "IIT JEE · 200k+ candidates",
     desc: "Qualified and ranked among the top candidates in one of the world's most competitive engineering entrance exams.",
   },
+  {
+    year: "2026",
+    title: "GATE Qualified — AIR 17,712",
+    org: "Graduate Aptitude Test in Engineering (GATE)",
+    desc: "Qualified GATE 2026 and secured All India Rank 17,712 in the Computer Science and Engineering paper.",
+  },
 ];
 
 export const extracurricular = [

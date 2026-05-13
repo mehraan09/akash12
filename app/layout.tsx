@@ -74,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       if (stored) {
                         document.documentElement.setAttribute('data-theme', stored);
                       } else {
-                        document.documentElement.setAttribute('data-theme', 'theme-mint');
+                        document.documentElement.setAttribute('data-theme', 'theme-dark');
                       }
                     } catch (e) {}
                   })();

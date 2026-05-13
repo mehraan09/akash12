@@ -43,9 +43,30 @@ export default function BlogCard({ id, title, description, image, author, date }
           </p>
         </div>
 
-        <div className="m-1">
-          <FluidAd />
-        </div>
+<div className="mb-2 border rounded-xl overflow-hidden">
+  <div
+    className="
+      px-3 py-1
+      text-[10px]
+      tracking-[0.2em]
+      uppercase
+      opacity-50
+      border-b
+    "
+  >
+    Advertisement
+  </div>
+
+  <div
+    className="
+      h-64
+      flex items-center justify-center
+      overflow-hidden
+    "
+  >
+    <FluidAd />
+  </div>
+</div>
 
         {/* ── Footer ── */}
         <div className="flex items-center justify-between border-t pt-3">

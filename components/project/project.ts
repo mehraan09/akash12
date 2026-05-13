@@ -39,3 +39,13 @@ export const p5data = [
   "Model: Implemented a CNN achieving 90% accuracy in detecting Apple Scab from leaf images.",
   "Optimization: Applied data augmentation, dropout, and hyperparameter tuning to improve model generalization.",
 ];
+
+export const p6data = [
+  "Feature: Built a performance-optimized personal portfolio showcasing projects, technical skills, blogs, and interactive experiences.",
+  "Stack: Developed using Next.js 14, TypeScript, and Tailwind CSS with App Router architecture.",
+  "Performance: Achieved 100/100 Core Web Vitals (FCP 1.38s, LCP 1.41s, CLS 0, INP 64ms, TTFB 0.16s).",
+  "Optimization: Reduced bundle size by 40% using code-splitting, lazy loading, dynamic imports, and asset optimization.",
+  "Integration: Integrated GitHub API (Octokit) with caching for dynamic repository and contribution data.",
+  "UI/UX: Designed responsive layouts with smooth animations, theme support, and optimized accessibility.",
+  "Deployment: Deployed on Vercel with monitoring, analytics, and production-grade performance optimizations.",
+];
