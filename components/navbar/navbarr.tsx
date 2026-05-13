@@ -60,7 +60,7 @@ export default function NavBar() {
       {/* Desktop Nav */}
       <nav
         aria-label="Primary navigation"
-        className="hidden md:flex flex-col mt-8 w-[16vw] text-xs"
+        className="ml-2 hidden md:flex flex-col mt-8 w-[16vw] text-xs"
       >
         <NavItems pathname={pathname} />
       </nav>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import FluidAd from "../ads/fullwidth";
+import XXSAd from "../ads/xxs";
 
 interface BlogCardProps {
   id: string;
@@ -56,7 +56,6 @@ export default function BlogCard({ id, title, description, image, author, date }
   >
     Advertisement
   </div>
-
   <div
     className="
       h-64
@@ -64,7 +63,7 @@ export default function BlogCard({ id, title, description, image, author, date }
       overflow-hidden
     "
   >
-    <FluidAd />
+    <XXSAd />
   </div>
 </div>
 

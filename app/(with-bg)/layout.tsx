@@ -12,7 +12,7 @@ export default function WithNavLayout({
      <ColorPaletteHamburger/>
       <Me/>
       <PlanetOrbitCanvas />
-      <div className="ml-[8dvw] md:ml-[5rem] flex flex-col md:flex-row relative z-30">
+      <div className="ml-[8dvw] md:ml-16 flex flex-col md:flex-row relative z-30">
         <main className="min-h-screen flex-grow z-30">
           {children}
         </main>

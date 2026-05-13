@@ -21,7 +21,6 @@ const games = [
 export default function ExtrasPage() {
   return (
 <div className="relative min-h-screen overflow-hidden">
-  {/* Mobile Top Ad */}
   <div
     className="
       h-[120px] md:hidden w-full border-b bg-background px-2 py-2 flex items-center justify-center"
@@ -29,18 +28,15 @@ export default function ExtrasPage() {
     <XXSAd />
   </div>
 
-  <aside
+  <div
     className="
       hidden md:flex
       fixed left-0 top-0 z-30
-      h-screen w-[22rem]
-      bg-background
-      items-center justify-center
-      px-4
-    "
+      h-screen w-[22rem] 
+      items-center justify-center ml-[8dvw] md:ml-16 "
   >
     <AdsenseAd />
-  </aside>
+  </div>
 
   {/* Main Content */}
   <main
@@ -50,7 +46,7 @@ export default function ExtrasPage() {
       overflow-x-auto
       overflow-y-hidden
       small-scrollbar
-      md:ml-[22rem]
+      md:ml-[22rem] z-50
     "
   >
     {games.map(({ label, Component }, i) => (
